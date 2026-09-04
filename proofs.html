@@ -13,11 +13,12 @@ body{background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSy
 a{color:inherit;text-underline-offset:3px}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px 100px}
 header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:36px;gap:12px;flex-wrap:wrap}
-header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--fg);text-decoration:none}
+header .brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:22px;color:var(--fg);text-decoration:none}
 header .brand span{color:var(--mut);font-weight:400}
-.avatar{width:32px;height:32px;object-fit:cover;display:block;border:1px solid var(--line)}
-nav{display:flex;gap:18px;font-size:14px;color:var(--mut)}
+.avatar{width:48px;height:48px;object-fit:cover;display:block;border:1px solid var(--line)}
+nav{display:flex;gap:20px;font-size:20px;color:var(--mut);flex-wrap:wrap}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
+nav a.active{color:var(--fg);text-decoration:underline}
 h1{font-size:32px;letter-spacing:-.8px;margin:0 0 8px}
 .sub{color:var(--mut);max-width:640px}
 figure{border:1px solid var(--line);border-radius:0;margin:24px 0;background:var(--bg)}
@@ -32,8 +33,8 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <body>
 <div class="wrap">
 <header>
-<a class="brand" href="index.html"><img class="avatar" src="roach.png" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ proofs</span></a>
-<nav><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="index.html#contact">Contact</a></nav>
+<a class="brand" href="index.html"><img class="avatar" src="roach1.png" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ proofs</span></a>
+<nav><a href="index.html">Home</a><a href="index.html#work">Work</a><a href="index.html#pricing">Pricing</a><a href="proofs.html" class="active">Proofs</a><a href="experience.html">Experience</a><a href="index.html#contact">Contact</a></nav>
 </header>
 
 <h1>Proofs</h1>
@@ -58,7 +59,7 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <div class="note">What this means for you: I have sold game content before and clients have paid me before. Your stuff gets the same care. <a href="index.html#contact">Come hire me.</a></div>
 
-<footer><span><a href="index.html">Back to home</a></span><span>© 2026 monsterchugger67. Hand-coded, no template. No AI used.</span></footer>
+<footer><span><a href="index.html">Back to home</a></span><span>Last updated: July 28th</span><span>© 2026 monsterchugger67. Hand-coded, no template. No AI used.</span></footer>
 </div>
 </body>
 </html>
