@@ -1,312 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FATE — Roblox Systems Developer | Full Game Frameworks, Combat, Backend</title>
-<meta name="description" content="Roblox scripter for hire: Movement, Combat, AI/Bosses, DataStores, Inventories, Matchmaking, Discord bots, Optimization, Full Game Frameworks. 6+ years, $5k+ earned, 150+ paid transactions." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>fate — roblox developer</title>
+<meta name="description" content="Roblox systems developer. Combat, movement, AI, datastores, discord bots, full game frameworks. 6+ years, $5k+ earned, 150+ transactions.">
 <style>
-:root{
-  --bg:#09090b; --panel:#101013; --panel2:#15151a; --border:#232329;
-  --text:#fafafa; --muted:#a1a1aa; --dim:#71717a;
-  --accent:#a78bfa; --accent2:#22c55e; --accent-ink:#0a0a0a;
-  --card-radius:14px;
-}
+:root{--bg:#fff;--fg:#111;--mut:#666;--line:#e5e5e5;--code:#f4f4f4}
+@media(prefers-color-scheme:dark){:root{--bg:#0a0a0a;--fg:#ededed;--mut:#999;--line:#262626;--code:#141414}}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 40%,transparent 100%);pointer-events:none;z-index:0}
-a{color:inherit;text-decoration:none}
-.mono{font-family:"JetBrains Mono",monospace}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
-/* NAV */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:#09090bcc;border-bottom:1px solid var(--border)}
-.nav-inner{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-weight:900;letter-spacing:-.5px;font-size:18px;display:flex;gap:10px;align-items:center}
-.logo-badge{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,#a78bfa,#22c55e);display:grid;place-items:center;color:#000;font-weight:900}
-.links{display:flex;gap:22px;color:var(--muted);font-size:14px;font-weight:500}
-.links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#000;font-weight:700;padding:11px 20px;border-radius:999px;font-size:14px;border:0;cursor:pointer;transition:.2s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 30px #ffffff2a}
-.btn-purple{background:var(--accent);color:#0a0a0a}
-.btn-ghost{background:transparent;color:#fff;border:1px solid var(--border)}
-.btn-ghost:hover{border-color:#fff;box-shadow:none}
-.btn-sm{padding:8px 14px;font-size:13px}
-/* HERO */
-.hero{padding:72px 0 28px}
-.status{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--panel);border-radius:999px;padding:7px 14px;font-size:13px;color:var(--muted)}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--accent2);box-shadow:0 0 0 4px #22c55e22;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
-.hero h1{font-size:clamp(38px,6vw,66px);line-height:.95;letter-spacing:-2.5px;font-weight:900;margin:22px 0 14px}
-.hero h1 span{color:var(--accent)}
-.sub{color:var(--muted);font-size:clamp(15px,2vw,18px);max-width:720px}
-.sub strong{color:#fff}
-.hero-ctas{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px}
-.stat{background:var(--panel);border:1px solid var(--border);border-radius:var(--card-radius);padding:18px}
-.stat b{font-size:24px;letter-spacing:-.5px;display:block}
-.stat span{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;font-weight:600}
-.stat small{display:block;color:var(--dim);font-size:12px;margin-top:4px}
-/* CARDS */
-section{padding:36px 0}
-.sec-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px;gap:16px}
-.sec-head h2{font-size:28px;letter-spacing:-1px}
-.sec-head p{color:var(--muted);font-size:14px}
-.kicker{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:var(--card-radius);padding:26px}
-.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-.pill{font-size:13px;font-weight:600;border:1px solid var(--border);background:var(--panel2);padding:7px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px}
-.pill i{font-style:normal;opacity:.7}
-.check{color:var(--accent2);font-weight:800}
-ul.clean{list-style:none;display:grid;gap:10px;margin-top:14px;color:#d4d4d8;font-size:15px}
-ul.clean li{display:flex;gap:10px}
-.tag{font-size:11px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;background:#ffffff12;border:1px solid var(--border);padding:3px 8px;border-radius:6px;color:var(--muted);white-space:nowrap;height:fit-content;margin-top:3px}
-/* systems */
-.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.sys{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px}
-.sys h3{font-size:14px;margin-bottom:10px;letter-spacing:-.2px}
-.sys h3 em{font-style:normal;color:var(--accent);font-family:"JetBrains Mono",monospace;font-size:12px;display:block;margin-bottom:4px;letter-spacing:.5px}
-.sys ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.sys li{font-size:12.5px;background:#ffffff0d;border:1px solid #ffffff12;padding:4px 9px;border-radius:999px;color:#d4d4d8}
-/* proof */
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.proof{position:relative;overflow:hidden}
-.proof .big{font-size:38px;font-weight:900;letter-spacing:-1.5px}
-.proof .label{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.proof .note{font-size:13px;color:var(--dim);margin-top:8px}
-.bar{height:8px;background:#ffffff14;border-radius:99px;margin-top:14px;overflow:hidden}
-.bar div{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px}
-/* services */
-.svc h3{font-size:17px;margin-bottom:8px;letter-spacing:-.3px}
-.svc p{font-size:14px;color:var(--muted)}
-.svc .price{margin-top:14px;font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--accent)}
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.step{padding:18px}
-.step b.num{font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:12px;letter-spacing:1px}
-.step h4{margin:8px 0 6px;font-size:15px}
-.step p{font-size:13px;color:var(--muted)}
-/* faq */
-details{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
-summary{cursor:pointer;font-weight:700;font-size:15px}
-details p{color:var(--muted);font-size:14px;margin-top:8px}
-/* contact */
-.contact-box{background:linear-gradient(180deg,#15151d,#0e0e12);border:1px solid #a78bfa44;border-radius:18px;padding:36px;text-align:center}
-.contact-box h2{font-size:clamp(26px,4vw,38px);letter-spacing:-1.5px}
-.discord-copy{display:flex;gap:10px;justify-content:center;margin:20px 0;flex-wrap:wrap}
-.code-box{font-family:"JetBrains Mono",monospace;background:#000;border:1px solid var(--border);padding:11px 18px;border-radius:999px;font-size:15px;display:flex;align-items:center;gap:10px}
-footer{border-top:1px solid var(--border);padding:26px 0 40px;color:var(--dim);font-size:13px;margin-top:20px}
-.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(14px);transition:.6s}
-.reveal.on{opacity:1;transform:none}
-#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:#fff;color:#000;font-weight:700;font-size:14px;padding:12px 20px;border-radius:999px;opacity:0;pointer-events:none;transition:.3s;z-index:99}
-#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:860px){
-  .links{display:none}
-  .stats-row,.grid2,.grid3,.proof-grid,.sys-grid{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr 1fr}
-  .hero{padding-top:44px}
-}
-@media(max-width:520px){.steps{grid-template-columns:1fr}}
+body{background:var(--bg);color:var(--fg);font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-underline-offset:3px}
+.wrap{max-width:680px;margin:0 auto;padding:0 20px 80px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);margin-bottom:32px}
+header b{font-size:14px}
+nav{display:flex;gap:16px;font-size:13px;color:var(--mut)}
+nav a:hover{color:var(--fg)}
+h1{font-size:28px;line-height:1.2;letter-spacing:-.5px;font-weight:700}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:48px 0 12px;color:var(--mut);font-weight:400}
+h2::before{content:"# "}
+p{margin:10px 0}
+.mut{color:var(--mut)}
+.small{font-size:13px}
+hr{border:0;border-top:1px solid var(--line);margin:32px 0}
+ul,ol{margin:10px 0 10px 20px}
+li{margin:4px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+th,td{text-align:left;padding:8px 10px;border:1px solid var(--line)}
+th{color:var(--mut);font-weight:400}
+pre{background:var(--code);border:1px solid var(--line);padding:12px;overflow-x:auto;font-size:13px;border-radius:4px}
+code{background:var(--code);border:1px solid var(--line);padding:1px 5px;border-radius:3px;font-size:12.5px}
+.box{border:1px solid var(--line);padding:16px;border-radius:4px;margin:12px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.btn{border:1px solid var(--fg);padding:8px 14px;border-radius:3px;text-decoration:none;font-size:13px;background:var(--fg);color:var(--bg)}
+.btn2{border:1px solid var(--line);padding:8px 14px;border-radius:3px;text-decoration:none;font-size:13px;background:transparent}
+.btn2:hover{border-color:var(--fg)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:12px 0}
+.grid div{background:var(--bg);padding:12px;font-size:13px}
+.grid b{display:block;font-size:13px;margin-bottom:4px}
+details{border:1px solid var(--line);border-radius:4px;padding:10px 12px;margin:8px 0}
+summary{cursor:pointer}
+details p{color:var(--mut);font-size:13px}
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:13px;padding:8px 14px;border-radius:3px;opacity:0;transition:.2s;pointer-events:none}
+#toast.show{opacity:1}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:24px}}
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-inner">
-    <div class="logo"><div class="logo-badge">F</div> FATE <span class="mono" style="color:var(--dim);font-weight:400;font-size:13px">/ monsterchugger67</span></div>
-    <div class="links">
-      <a href="#proof">Proof</a><a href="#systems">Systems</a><a href="#services">Commissions</a><a href="#process">Process</a><a href="#faq">FAQ</a>
-    </div>
-    <a class="btn btn-sm" href="#contact">Hire Me</a>
-  </div>
-</nav>
-
 <div class="wrap">
-  <!-- HERO -->
-  <div class="hero">
-    <div class="status"><span class="dot"></span> <span id="avail">Available for commissions</span> <span class="mono" style="color:var(--dim)">• GMT+1 • replies &lt; 24h</span></div>
-    <h1>Roblox Systems Developer that ships <span>full games, not buggy scripts.</span></h1>
-    <p class="sub"><strong>6+ years game dev. 3+ years Luau. $5,000+ earned as a teen.</strong><br>
-    I build server-authoritative Combat, Movement, AI/Bosses, DataStores, Inventories, Matchmaking, Shops, Trading, Quests, Discord–Roblox bots, and complete optimized frameworks that survive exploiters, 100+ players, and updates.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-purple" href="#contact">Commission Me on Discord</a>
-      <a class="btn btn-ghost" href="#proof">See proof ↓</a>
-      <button class="btn btn-ghost mono" onclick="copyDiscord()">⧉ monsterchugger67</button>
-    </div>
 
-    <div class="stats-row">
-      <div class="stat"><b>6+ yrs</b><span>Game development</span><small>3+ Luau • 4+ Discord bots • 5+ Minecraft</small></div>
-      <div class="stat"><b>$5,392+</b><span>Tracked earnings</span><small>$4,659 Tebex + $1,233 PayPal balance shown below</small></div>
-      <div class="stat"><b>150+</b><span>Paid transactions</span><small>Minecraft stores + Roblox commissions</small></div>
-      <div class="stat"><b>40+ systems</b><span>Shipped & reusable</span><small>Combat → Economy → Backend</small></div>
-    </div>
-  </div>
+<header>
+<b>fate / monsterchugger67</b>
+<nav><a href="#work">work</a><a href="#systems">systems</a><a href="#payments">payments</a><a href="#contact">contact</a></nav>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="kicker">// about_me</div>
-    <div class="grid2">
-      <div class="card">
-        <h2 style="font-size:22px;letter-spacing:-.5px">Welcome to my portfolio!</h2>
-        <p style="color:var(--muted);margin-top:8px">Game Development Enthusiast and Experienced Programmer. Coding in my basement since I was 12, generating $5,000 as a little kid.</p>
-        <ul class="clean">
-          <li><span class="check">✓</span> <span><strong>6+ years</strong> game development & programming experience</span></li>
-          <li><span class="check">✓</span> <span><strong>3+ years</strong> Luau scripting — Client + Server architecture</span></li>
-          <li><span class="check">✓</span> <span><strong>4+ years</strong> Discord bots in Python and Node.js — including Discord ↔ Roblox interconnected bots</span></li>
-          <li><span class="check">✓</span> <span><strong>5+ years</strong> Minecraft mods, plugins and Skripts (Tebex stores)</span></li>
-        </ul>
-        <div class="pill-row">
-          <span class="pill"><i>◈</i> Lua / Luau</span><span class="pill"><i>🐍</i> Python</span><span class="pill"><i>☕</i> Java</span><span class="pill"><i>JS</i> JavaScript</span><span class="pill"><i>#</i> CSS</span><span class="pill"><i>⚛</i> React</span><span class="pill"><i>⬢</i> Node.js</span>
-        </div>
-        <p class="mono" style="margin-top:16px;font-size:12.5px;color:var(--dim)">This is my Roblox development portfolio — scroll down to see past work & proof.</p>
-      </div>
-      <div class="card">
-        <div class="label mono" style="font-size:12px;color:var(--muted);letter-spacing:1px">CURRENTLY</div>
-        <div style="display:flex;gap:12px;align-items:center;margin:12px 0">
-          <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#333,#111);display:grid;place-items:center;font-weight:900;border:1px solid var(--border)">F</div>
-          <div><div style="font-weight:800">monsterchugger67 <span style="font-size:12px;color:var(--accent)">♛ FATE</span></div><div style="font-size:13px;color:var(--muted)">Playing ROBLOX</div></div>
-        </div>
-        <div style="border-top:1px solid var(--border);padding-top:14px;display:grid;gap:8px;font-size:14px">
-          <div>🛠️ <strong>Specialty:</strong> <span style="color:var(--muted)">Absolute Optimization, Backend, Debugging, DataStores</span></div>
-          <div>⚔️ <strong>Best at:</strong> <span style="color:var(--muted)">Movement + Combat + Boss AI</span></div>
-          <div>🤖 <strong>Edge:</strong> <span style="color:var(--muted)">Discord–Roblox verification, logs, economy sync</span></div>
-          <div class="mono" style="font-size:12.5px;color:var(--dim);margin-top:6px">Local: <span id="localTime">--:--:--</span> • Your: <span id="yourTime">--</span></div>
-        </div>
-        <a class="btn btn-sm" style="margin-top:16px;width:100%;justify-content:center" href="#contact">Check availability →</a>
-      </div>
-    </div>
-  </section>
+<p class="small mut">● available for commissions — gmt+1, replies &lt;24h — <span id="clock">--:--:--</span></p>
+<h1>roblox systems developer.</h1>
+<p>i build full games, not buggy scripts. combat, movement, ai/bosses, datastores, inventories, matchmaking, shops, discord–roblox bots. server-authoritative, optimized, documented.</p>
 
-  <!-- PROOF -->
-  <section id="proof">
-    <div class="sec-head"><div><div class="kicker">// proof_not_promises</div><h2>Real money. Real transactions.</h2></div><p>Blurring private customer data. Aggregates only.</p></div>
-    <div class="proof-grid">
-      <div class="card proof">
-        <div class="label">Minecraft — Tebex Store (Stealify Store)</div>
-        <div class="big">$4,659.45</div>
-        <div style="color:var(--muted);font-size:14px">All-time sales • $753.65 year-to-date • 150+ search results/transactions</div>
-        <div class="bar"><div style="width:100%"></div></div>
-        <div class="note">Proves I can build monetizable game content, stores, packages & integrations that people actually buy. Same monetization thinking I bring to Roblox Gamepasses / DevProducts.</div>
-        <div class="pill-row"><span class="pill">Tebex / Webstore</span><span class="pill">Packages</span><span class="pill">Payments</span><span class="pill">Minecraft Plugins</span></div>
-      </div>
-      <div class="card proof">
-        <div class="label">Roblox — Scripting Commissions (PayPal)</div>
-        <div class="big">$1,233.56</div>
-        <div style="color:var(--muted);font-size:14px">Available balance snapshot • + ongoing commission payouts</div>
-        <div class="bar"><div style="width:72%"></div></div>
-        <div class="note">Direct client work: custom Roblox systems, fixes, backend & bots. Clients pay, re-hire, and refer because code is clean, optimized, and documented.</div>
-        <div class="pill-row"><span class="pill">Roblox Commissions</span><span class="pill">Repeat clients</span><span class="pill">Custom systems</span></div>
-      </div>
-    </div>
-    <div class="card" style="margin-top:12px;display:flex;gap:14px;align-items:center;flex-wrap:wrap">
-      <span class="mono" style="font-size:12px;color:var(--accent);letter-spacing:1px">WHY THIS MATTERS FOR YOU →</span>
-      <span style="font-size:14px;color:var(--muted)">Most scripters show clips. I show <strong style="color:#fff">stores that sold + clients that paid</strong>. If you need retention, monetization, and no data-loss, that's what I do.</span>
-    </div>
-  </section>
-
-  <!-- SYSTEMS -->
-  <section id="systems">
-    <div class="sec-head"><div><div class="kicker">// what_i_build</div><h2>Everything your game needs to launch & scale.</h2></div><p>Pick one system or hire me for the full framework.</p></div>
-    <div class="sys-grid">
-      <div class="sys reveal"><h3><em>01 / COMBAT & MOVEMENT</em>Feel good, no exploit</h3><ul><li>Movement System</li><li>Combat System</li><li>Abilities</li><li>Loadouts</li><li>Classes</li><li>Custom Mechanics</li></ul></div>
-      <div class="sys reveal"><h3><em>02 / AI & WORLD</em>Alive servers</h3><ul><li>AI / NPCs</li><li>Bosses</li><li>Waves</li><li>Rounds</li><li>Matchmaking</li><li>Teleportation</li></ul></div>
-      <div class="sys reveal"><h3><em>03 / BACKEND & DATA</em>Never lose data</h3><ul><li>DataStores</li><li>Client + Server Architecture</li><li>Backend</li><li>All Server Interconnected</li><li>Debugging</li><li>Absolute Optimization</li></ul></div>
-      <div class="sys reveal"><h3><em>04 / PROGRESSION</em>Retention machines</h3><ul><li>XP / Levels</li><li>Stats</li><li>Skill Trees</li><li>Upgrades</li><li>Quests</li><li>Dialogue</li><li>Rebirths</li><li>Progression</li></ul></div>
-      <div class="sys reveal"><h3><em>05 / ECONOMY</em>Make money</h3><ul><li>Economy</li><li>Shops</li><li>Trading</li><li>Crafting</li><li>Loot / Chests</li><li>RNG</li><li>Inventories</li><li>Card / Deck Systems</li></ul></div>
-      <div class="sys reveal"><h3><em>06 / LIVEOPS & POLISH</em>Launch ready</h3><ul><li>Leaderboards</li><li>Rewards</li><li>Monetization</li><li>Cutscenes</li><li>Discord-Roblox Bots</li><li>Full Game Frameworks</li></ul></div>
-    </div>
-    <div class="card" style="margin-top:12px">
-      <span class="mono" style="font-size:12px;color:var(--accent)">MY STANDARD →</span>
-      <p style="font-size:14px;color:var(--muted);margin-top:6px">Server-authoritative RemoteEvents/Functions, ProfileService-style session locking, anti-exploit sanity checks, Knit/OOP structure, low network usage, FPS-safe client code. You get organized folders, commented code, and a Loom walkthrough — not a 2000-line free model.</p>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="sec-head"><div><div class="kicker">// commissions</div><h2>Hire me for one system or the whole game.</h2></div><p>Fixed scope • Milestone payments • No leaks</p></div>
-    <div class="grid3">
-      <div class="card svc reveal"><span class="tag">Most hired</span><h3 style="margin-top:10px">⚔️ Combat / Movement / Bosses</h3><p>Hitbox system, combos, blocking, dash, wall-run/slide, boss phases, minions, HP bars, damage numbers. Optimized + mobile + controller support.</p><div class="price">from $80 / system → DM for quote</div></div>
-      <div class="card svc reveal"><span class="tag">Best value</span><h3 style="margin-top:10px">🏗️ Full Game Framework</h3><p>Data + Inventory + Shop + Quests + Leaderstats + Save/Load + Teleports + Admin + Monetization wiring. A launch-ready skeleton you can expand.</p><div class="price">from $300 / framework → DM for scope</div></div>
-      <div class="card svc reveal"><span class="tag">My edge</span><h3 style="margin-top:10px">🤖 Backend + Discord ↔ Roblox</h3><p>DataStores that don't wipe, global leaderboards, cross-server trading/matchmaking, verification bots, purchase logs, ban sync, stats dashboards (Python / Node.js).</p><div class="price">from $60 / integration → DM for stack</div></div>
-    </div>
-    <div class="card" style="margin-top:12px">
-      <strong>Also:</strong> <span style="color:var(--muted);font-size:14px">Debugging hell-scripts (I fix other devs' broken games fast) • Optimization passes (server ms + client FPS + memory leaks) • Minecraft plugins/mods if you need cross-project work.</span>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="kicker">// how_it_works</div><h2 style="font-size:28px;letter-spacing:-1px;margin-bottom:18px">Fast, safe, no drama.</h2>
-    <div class="steps">
-      <div class="card step reveal"><b class="num">01</b><h4>DM with idea</h4><p>Send reference game + must-haves. I reply with scope, price, timeline.</p></div>
-      <div class="card step reveal"><b class="num">02</b><h4>Milestone + deposit</h4><p>Small deposit to start. Big projects split into playable milestones.</p></div>
-      <div class="card step reveal"><b class="num">03</b><h4>I build + show clips</h4><p>Clean commits, test place, progress videos. You request tweaks.</p></div>
-      <div class="card step reveal"><b class="num">04</b><h4>Delivery + support</h4><p>Source + setup guide + walkthrough. 7-day bugfix warranty.</p></div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="kicker">// faq</div><h2 style="font-size:28px;letter-spacing:-1px;margin-bottom:18px">Questions clients ask.</h2>
-    <details open><summary>Do you use free models or AI slop?</summary><p>No. Everything is hand-coded for your game, server-authoritative, and structured so future devs can extend it. I can refactor your existing code too.</p></details>
-    <details><summary>How do payments work?</summary><p>PayPal (and Tebex experience for stores). Deposit upfront, rest on delivery/milestones. You get clips before final payment, source after final payment.</p></details>
-    <details><summary>Will my data wipe / will exploiters break it?</summary><p>I use session-locking patterns, server validation for every Remote, rate limits, and pcall+retry queues. No system is 100% exploiter-proof, but my games don't trust the client.</p></details>
-    <details><summary>Do you do rev-share?</summary><p>Only if gameplay + team + funding are already solid. Otherwise fixed-price commissions so we both move fast.</p></details>
-    <details><summary>What do you need from me to start?</summary><p>Game link / test place access, list of features in priority order, and any UI you already have. I handle architecture, naming, and optimization.</p></details>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="contact-box reveal">
-      <div class="kicker" style="text-align:center">// limited_slots — 2 commission slots open</div>
-      <h2>Have a game idea?<br>Let's ship it without bugs.</h2>
-      <p style="color:var(--muted);margin-top:10px">Fastest reply on Discord. Tell me: game type + 3 must-have systems + deadline.</p>
-      <div class="discord-copy">
-        <div class="code-box"><span style="width:10px;height:10px;border-radius:50%;background:var(--accent2);display:inline-block"></span> monsterchugger67 <button onclick="copyDiscord()" style="background:#fff;border:0;border-radius:99px;padding:6px 12px;font-weight:800;cursor:pointer;font-size:12px">COPY</button></div>
-        <!-- EDIT THESE 2 LINKS: -->
-        <a class="btn btn-purple" href="https://discord.com/users/monsterchugger67" target="_blank">Add / DM on Discord</a>
-        <a class="btn btn-ghost" href="https://www.roblox.com/users/profile" target="_blank">Roblox Profile</a>
-      </div>
-      <p class="mono" style="font-size:12px;color:var(--dim)">Response &lt; 24h • GMT+1 (<span id="localTime2">--</span>) • Serious inquiries only</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="foot">
-      <span>© 2026 FATE / monsterchugger67 — Roblox Systems Developer. Built from scratch, no template.</span>
-      <span class="mono">Luau • Python • Node.js • Java • JS • React</span>
-    </div>
-  </footer>
+<div class="row">
+<a class="btn" href="#contact">hire me</a>
+<a class="btn2" href="#" onclick="copyDiscord();return false;">copy discord: monsterchugger67</a>
 </div>
 
-<div id="toast">Copied!</div>
+<pre>6+ yrs game dev / 3+ yrs luau / 4+ yrs discord bots / 5+ yrs minecraft
+$5,392+ tracked / 150+ paid transactions / 40+ systems shipped</pre>
+
+<h2>about</h2>
+<p>game dev enthusiast. coding since i was 12, made $5k as a kid.</p>
+<ul>
+<li><b>6+ years</b> <span class="mut">game dev + programming</span></li>
+<li><b>3+ years</b> <span class="mut">luau — client + server architecture</span></li>
+<li><b>4+ years</b> <span class="mut">discord bots, python + node.js, discord ↔ roblox linked</span></li>
+<li><b>5+ years</b> <span class="mut">minecraft mods / plugins / skripts</span></li>
+</ul>
+<p class="small mut">stack: <code>luau</code> <code>python</code> <code>java</code> <code>javascript</code> <code>css</code> <code>react</code> <code>node.js</code></p>
+
+<h2 id="work">proof</h2>
+<p class="small mut">aggregates only. no customer data shown.</p>
+<table>
+<tr><th>source</th><th>amount</th><th>note</th></tr>
+<tr><td>tebex — minecraft (stealify store)</td><td>$4,659.45 all-time</td><td>$753.65 ytd, 150+ transactions</td></tr>
+<tr><td>paypal — roblox commissions</td><td>$1,233.56 balance</td><td>direct client work, repeats + referrals</td></tr>
+</table>
+<p class="small">most scripters show clips. i show stores that sold + clients that paid.</p>
+
+<h2 id="systems">what i build</h2>
+<div class="grid">
+<div><b>combat + movement</b><span class="mut">movement, combat, abilities, loadouts, classes, custom mechanics. hitboxes, combos, dash, mobile + controller.</span></div>
+<div><b>ai + world</b><span class="mut">ai / npcs, bosses + phases, waves, rounds, matchmaking, teleportation.</span></div>
+<div><b>backend + data</b><span class="mut">datastores w/ session locking, client/server arch, cross-server systems, debugging, optimization.</span></div>
+<div><b>progression</b><span class="mut">xp/levels, stats, skill trees, upgrades, quests, dialogue, rebirths.</span></div>
+<div><b>economy</b><span class="mut">economy, shops, trading, crafting, loot/chests, rng, inventories, card/deck.</span></div>
+<div><b>liveops</b><span class="mut">leaderboards, rewards, monetization, cutscenes, discord bots, full frameworks.</span></div>
+</div>
+<p class="small mut">standard: server validates everything, no trust-the-client, profile-style saving with retries, knit/oop structure, commented + loom walkthrough.</p>
+
+<h2>commissions</h2>
+<div class="box"><b>combat / movement / bosses</b> — from $80/system<br><span class="mut small">hitboxes, blocking, boss ai, damage numbers, vfx wiring.</span></div>
+<div class="box"><b>full game framework</b> — from $300 <span class="small mut">[most value]</span><br><span class="mut small">data + inventory + shop + quests + saves + teleports + admin + monetization.</span></div>
+<div class="box"><b>backend + discord ↔ roblox</b> — from $60<br><span class="mut small">no-wipe saves, global boards, verification bots, purchase/ban logs.</span></div>
+<p class="small mut">also: fixing other devs' broken games, optimization passes (server ms / fps / memory).</p>
+
+<h2 id="payments">payments</h2>
+<p>i accept direct paypal for roblox commissions. for store-based work i use tebex checkout.</p>
+<p class="small">via tebex, buyers can pay with:</p>
+<ul class="small">
+<li>paypal (global)</li>
+<li>credit / debit cards (visa, mc, amex — global)</li>
+<li>crypto</li>
+<li>cashapp (us), paysafecard, razer gold pin/wallet</li>
+<li>klarna, afterpay, ideal, blik, pix, oxxo, + 70 regionals</li>
+</ul>
+<p class="small mut">full list: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a></p>
+<div class="box small">terms: deposit upfront, milestones on big builds. clips before final, source after final. 7-day bugfix warranty. paypal for commissions, tebex for store products.</div>
+
+<h2>process</h2>
+<ol class="small">
+<li>dm ref game + 3 must-haves → i quote scope/price/time</li>
+<li>deposit → start. big = milestones.</li>
+<li>build + clips → tweaks.</li>
+<li>delivery: source + setup guide + walkthrough.</li>
+</ol>
+
+<h2>faq</h2>
+<details><summary>free models?</summary><p>no. hand-coded, server-authoritative, extendable.</p></details>
+<details><summary>data wipes / exploiters?</summary><p>session locking, server checks on every remote, rate limits, retry queues. nothing is 100%, but i don't trust the client.</p></details>
+<details><summary>rev-share?</summary><p>only if team + funding already solid. otherwise fixed-price.</p></details>
+<details><summary>need from me?</summary><p>test place access, feature list in priority order, any ui you have.</p></details>
+
+<h2 id="contact">contact</h2>
+<p>fastest on discord. send: game type + 3 systems + deadline.</p>
+<pre>discord: monsterchugger67 [FATE]
+roblox: playing daily
+timezone: gmt+1 / <span id="clock2">--</span></pre>
+<div class="row">
+<a class="btn" href="https://discord.com/users/monsterchugger67" target="_blank">dm on discord</a>
+<a class="btn2" href="https://www.roblox.com/users/profile" target="_blank">roblox profile</a>
+<a class="btn2" href="#" onclick="copyDiscord();return false;">copy username</a>
+</div>
+
+<footer><span>© 2026 fate — no template, hand-coded.</span><span>luau / python / node</span></footer>
+</div>
+<div id="toast">copied</div>
 <script>
-// === EDIT ME ===
-const DISCORD_USER = "monsterchugger67";
-function copyDiscord(){
-  navigator.clipboard.writeText(DISCORD_USER).then(()=>{
-    const t=document.getElementById('toast');t.textContent="Discord copied: "+DISCORD_USER;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);
-  });
-}
-// clocks like your old portfolio
-function tick(){
-  try{
-    const now=new Date();
-    const gmt1=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit',second:'2-digit',weekday:'short',day:'numeric',month:'short'}).format(now);
-    const lt=document.getElementById('localTime'); if(lt) lt.textContent=gmt1+" • GMT+1";
-    const lt2=document.getElementById('localTime2'); if(lt2) lt2.textContent=gmt1;
-    const yt=document.getElementById('yourTime'); if(yt) yt.textContent=now.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
-  }catch(e){}
-}
+const U="monsterchugger67";
+function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);});}
+function tick(){try{const o={timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false};const s=new Intl.DateTimeFormat('en-GB',o).format(new Date());document.getElementById('clock').textContent=s+" gmt+1";document.getElementById('clock2').textContent=s;}catch(e){}}
 setInterval(tick,1000);tick();
-// reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
