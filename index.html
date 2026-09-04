@@ -3,181 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FATE — Roblox Developer for Hire</title>
-<meta name="description" content="Roblox developer for commissions. Combat, movement, anticheats, backend, datastores, AI, full game frameworks. Communicative, on-time, optimized.">
+<title>monsterchugger67, Roblox Scripter For Hire</title>
+<meta name="description" content="Roblox scripter for commissions. Combat, movement, anticheats, data, bosses, full frameworks. Fast replies, on time, optimized.">
 <style>
-:root{--bg:#fff;--fg:#161616;--mut:#5f5f5f;--line:#e7e7e7;--soft:#f7f7f7;--radius:0}
+:root{--bg:#fff;--fg:#161616;--mut:#5f5f5f;--line:#e7e7e7;--soft:#f7f7f7}
 @media(prefers-color-scheme:dark){:root{--bg:#0b0b0b;--fg:#ececec;--mut:#a3a3a3;--line:#242424;--soft:#131313}}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 a{color:inherit;text-underline-offset:3px}
-.wrap{max-width:760px;margin:0 auto;padding:0 24px 100px}
-header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:56px}
-header .brand{font-weight:650;font-size:15px;letter-spacing:-.2px}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px 100px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:48px;gap:12px;flex-wrap:wrap}
+header .brand{font-weight:700;font-size:15px}
 header .brand span{color:var(--mut);font-weight:400}
-nav{display:flex;gap:20px;font-size:14px;color:var(--mut)}
+nav{display:flex;gap:18px;font-size:14px;color:var(--mut);flex-wrap:wrap}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
 .badge{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);border:1px solid var(--line);background:var(--soft);border-radius:0;padding:6px 14px;margin-bottom:20px}
-h1{font-size:40px;line-height:1.12;letter-spacing:-1.2px;font-weight:700;margin:0 0 16px}
+h1{font-size:38px;line-height:1.1;letter-spacing:-1px;font-weight:750;margin:0 0 12px}
 .lead{font-size:17px;color:var(--mut);max-width:620px}
-.lead strong{color:var(--fg);font-weight:600}
-section{margin-top:72px}
-h2{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-h3{font-size:17px;margin-bottom:6px;letter-spacing:-.2px}
-p{margin:12px 0}
-.card{border:1px solid var(--line);border-radius:0;padding:24px;margin:14px 0;background:var(--bg)}
-.card p{color:var(--mut);font-size:15px;margin:6px 0 0}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-table{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.lead strong{color:var(--fg)}
+section{margin-top:64px}
+h2{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+h3{font-size:16px;margin-bottom:4px}
+p{margin:10px 0}
+.tldr{background:var(--soft);border:1px solid var(--line);border-radius:0;padding:18px 20px;margin:22px 0;font-size:15px}
+.tldr b{display:block;margin-bottom:6px}
+.tldr ul{margin:6px 0 0 18px}
+.tldr li{margin:3px 0}
+.card{border:1px solid var(--line);border-radius:0;padding:20px;margin:12px 0;background:var(--bg)}
+.card p{color:var(--mut);font-size:15px;margin:4px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0}
 th,td{text-align:left;padding:12px 14px;border:1px solid var(--line);vertical-align:top}
 th{background:var(--soft);color:var(--mut);font-weight:500;font-size:13px}
-ul.clean{list-style:none;margin:12px 0}
-ul.clean li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:15px}
+ul.clean{list-style:none;margin:10px 0}
+ul.clean li{padding:8px 0 8px 24px;position:relative;border-bottom:1px solid var(--line);font-size:15px}
 ul.clean li:last-child{border-bottom:0}
-ul.clean li::before{content:"—";position:absolute;left:0;color:var(--mut)}
-.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:600;text-decoration:none;border:1px solid var(--fg)}
-.btn2{display:inline-block;background:transparent;color:var(--fg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:500;text-decoration:none;border:1px solid var(--line)}
+ul.clean li::before{content:">";position:absolute;left:0;color:var(--mut)}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:650;text-decoration:none;border:1px solid var(--fg)}
+.btn2{display:inline-block;background:transparent;color:var(--fg);padding:12px 22px;border-radius:0;font-size:14.5px;text-decoration:none;border:1px solid var(--line)}
 .btn2:hover{border-color:var(--fg)}
-.note{background:var(--soft);border:1px solid var(--line);border-radius:0;padding:18px 20px;font-size:14.5px;color:var(--mut);margin:16px 0}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:0;padding:16px 18px;font-size:14.5px;color:var(--mut);margin:14px 0}
 .note strong{color:var(--fg)}
-figure{border:1px solid var(--line);border-radius:0;margin:14px 0;background:var(--bg)}
-figure img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line);background:var(--soft)}
-figure figcaption{padding:16px 18px;font-size:14px}
-figure figcaption b{display:block;font-size:14.5px;margin-bottom:4px}
-figure figcaption span{color:var(--mut)}
-details{border:1px solid var(--line);border-radius:0;padding:14px 18px;margin:10px 0}
+details{border:1px solid var(--line);border-radius:0;padding:12px 16px;margin:8px 0}
 summary{cursor:pointer;font-weight:600;font-size:15px}
 details p{color:var(--mut);font-size:14.5px}
-footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+footer{margin-top:72px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 #toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:14px;padding:10px 18px;border-radius:0;opacity:0;transition:.2s;pointer-events:none}
 #toast.show{opacity:1}
-@media(max-width:640px){h1{font-size:30px}.grid2{grid-template-columns:1fr}header{margin-bottom:36px}}
+@media(max-width:640px){h1{font-size:29px}.grid2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-<div class="brand">FATE <span>/ monsterchugger67 — Roblox Developer</span></div>
-<nav><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="proofs.html">Proofs</a><a href="#contact">Contact</a></nav>
+<div class="brand">monsterchugger67 <span>/ roblox scripter</span></div>
+<nav><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="proofs.html">Proofs</a><a href="experience.html">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 
-<div class="badge">● Available for commissions · Eastern Time · My 12 AM is <span class="their-time">loading</span> for you · Replies within 24 hours</div>
-<h1>Roblox developer for hire.</h1>
-<p class="lead">Hello, I'm <strong>FATE</strong>. I build complete, scalable Roblox systems — combat, movement, top-tier anticheats, backend and data, AI and bosses, and full game frameworks. You will receive your commission <strong>on time, high quality, and brutally optimized</strong>.</p>
-<p class="lead">I am very communicative and will not ghost you. If you are clear and detailed about what you want, I will handle the rest. So far I have earned <a href="proofs.html">more than 5,000 dollars</a> from game development work.</p>
+<div class="badge">Open for commissions. Eastern Time. My 12 AM is <span class="their-time">loading</span> for you. I reply fast.</div>
+<h1>I make Roblox stuff that works.</h1>
+<p class="lead">Hey, I am <strong>monsterchugger67</strong>. Combat, movement, anticheats, data, bosses, the whole backend mess. You tell me what you want, I build it clean and it ships on time.</p>
+
+<div class="tldr"><b>TL;DR, skim this:</b>
+<ul>
+<li>Roblox only. Systems, anticheats, full frameworks.</li>
+<li><a href="proofs.html">Made over 5,000 dollars</a> doing this. <a href="proofs.html">See proofs.</a></li>
+<li>Half upfront, half when done. Prices below.</li>
+<li>I do not ghost. You get clips and updates.</li>
+</ul>
+</div>
 
 <div class="btn-row">
-<a class="btn" href="#contact">Commission Me</a>
+<a class="btn" href="#contact">Hire me</a>
 <a class="btn2" href="#" onclick="copyDiscord();return false;">Copy Discord</a>
+<a class="btn2" href="proofs.html">See proofs</a>
 </div>
 
 <section>
-<h2>Why hire me</h2>
+<h2>Why me, quick version</h2>
 <div class="grid2">
-<div class="card"><h3>On time, every time</h3><p>Clear timeline agreed upfront. Milestone updates with clips, so you always know where things stand.</p></div>
-<div class="card"><h3>Built to scale</h3><p>Server-authoritative code, clean architecture, commented and documented. Every system is built for customizability, with an easy to read config and well commented Luau, so you or future developers can tweak and extend it.</p></div>
-<div class="card"><h3>Brutally optimized</h3><p>Low server milliseconds, FPS-safe client code, no memory leaks. Tested for real player counts.</p></div>
-<div class="card"><h3>Easy to work with</h3><p>Polite, responsive, honest about scope. If something is a bad idea for your game, I will tell you.</p></div>
+<div class="card"><h3>On time</h3><p>We agree a date. You get clips along the way. It lands when I say it lands.</p></div>
+<div class="card"><h3>Clean code</h3><p>Config file you can actually read. Well commented Luau. Tweak numbers yourself, no headache.</p></div>
+<div class="card"><h3>Fast code</h3><p>Low lag, no memory leaks, plays fine on phone and console too.</p></div>
+<div class="card"><h3>Easy to reach</h3><p>Ask anything. If your idea will cause problems later, I will just tell you straight.</p></div>
 </div>
 </section>
 
-<section id="services">
-<h2>What I build — Roblox</h2>
-<p>I work exclusively in Roblox commissions. Everything below is server-validated and exploiter-resistant by default.</p>
-
-<div class="card"><h3>Gameplay systems</h3><p>Movement systems, combat systems with hitboxes and combos, abilities, classes, loadouts, custom mechanics. Mobile and controller support.</p></div>
-<div class="card"><h3>Top-tier anticheats</h3><p>Server-side movement sanity checks, anti fly, speed, teleport and noclip. Remote event validation and rate limiting, anti damage and economy spoofing, staff flagging and logs. No system that trusts the client.</p></div>
-<div class="card"><h3>Backend and data</h3><p>DataStores with session locking and retry queues so data does not wipe. Cross-server systems, matchmaking, rounds, teleportation, global leaderboards. Debugging and optimization of existing games.</p></div>
-<div class="card"><h3>AI, bosses and world</h3><p>NPCs and AI, multi-phase bosses, waves, minions, dialogue, quests, cutscenes, progression, rebirths, skill trees, stats and levels.</p></div>
-<div class="card"><h3>Economy and monetization</h3><p>Inventories, shops, trading, crafting, loot and chests, random generation, upgrades, rewards, gamepass and developer product wiring.</p></div>
-<div class="card"><h3>Discord to Roblox integration</h3><p>Verification bots, purchase and ban logs, economy sync and dashboards. Built with Python or Node.js.</p></div>
-
-<div class="note"><strong>Customizability included.</strong> All code is built for customizability as well, containing an easy to read config and well commented Luau. You can change damage, cooldowns, prices, chances, and boss phases yourself without touching core logic.</div>
-
-<details><summary>Full list of systems I have shipped</summary>
-<p>Combat, movement, AI, bosses, NPCs, DataStores, inventories, rounds, matchmaking, quests, dialogue, economy, random generation, progression, rebirths, shops, trading, crafting, abilities, card and deck systems, waves, leaderboards, rewards, monetization, teleportation, cutscenes, loot, chests, upgrades, skill trees, stats, experience and levels, classes, loadouts, custom mechanics, and full game frameworks with interconnected servers.</p>
-<p>Languages: Luau, Python, JavaScript, Java, CSS, React, Node.js.</p>
-</details>
-</section>
-
-<section id="experience">
-<h2>Past experience</h2>
-<p>My Tebex store handled <strong>both Roblox commissions and Minecraft mod, plugin and Skript commissions</strong>. Minecraft work is past experience only — I do not take Minecraft commissions at this time. It is shown to prove I have shipped paid work and handled real money responsibly. Screenshots are on the <a href="proofs.html">proofs page</a>.</p>
-<table>
-<tr><th>Work</th><th>Result</th></tr>
-<tr><td>Tebex store — Stealify Store (Roblox commissions plus Minecraft mods, plugins and Skripts)</td><td><a href="proofs.html">4,659.45 dollars in all time sales</a>, <a href="proofs.html">753.65 dollars year to date</a>, <a href="proofs.html">more than 150 paid transactions</a></td></tr>
-<tr><td>Roblox scripting commissions (PayPal)</td><td><a href="proofs.html">1,233.56 dollar balance snapshot</a>, plus ongoing payouts. Repeat clients and referrals for custom systems, backend work, and fixes.</td></tr>
-</table>
-<p style="color:var(--mut);font-size:14.5px">Customer details are kept private. Figures above are aggregates only. <a href="proofs.html">View all proofs with screenshots →</a></p>
-</section>
-
-<section>
-<h2>Proofs</h2>
-<p>Real sales history with screenshots, on a separate page so this page stays clean.</p>
-<div class="card"><h3><a href="proofs.html">View proofs →</a></h3><p>Tebex overview (4,659.45 dollars all time, both Roblox and Minecraft work), 150+ Tebex transactions, and PayPal Roblox balance (1,233.56 dollars). Customer names and IDs redacted.</p></div>
+<section id="work">
+<h2>What I do</h2>
+<p>Roblox commissions only. Pick one thing or hand me the whole game.</p>
+<div class="card"><h3>Combat and movement</h3><p>Swords, guns, combos, blocking, dashing, sliding, wall running. Hitboxes that feel fair.</p></div>
+<div class="card"><h3>Anticheats</h3><p>Top tier stuff. Speed, fly, teleport, noclip checks. Remotes validated and rate limited. No trust in the client, ever.</p></div>
+<div class="card"><h3>Data that does not wipe</h3><p>Saves with session locking and retries. Cross server stuff, matchmaking, rounds, teleports, global boards.</p></div>
+<div class="card"><h3>Bosses, mobs, quests</h3><p>Boss phases, minions, waves, NPCs, dialogue, quests, cutscenes, levels, rebirths, skill trees.</p></div>
+<div class="card"><h3>Shops and money</h3><p>Inventory, shops, trading, crafting, loot, chests, upgrades, rewards, gamepasses wired up right.</p></div>
+<div class="card"><h3>Discord hooked to Roblox</h3><p>Verify members, log buys and bans, sync stats. Python or Node, your pick.</p></div>
+<div class="note"><strong>Built so you can tweak it.</strong> All code is built for customizability as well, containing an easy to read config and well commented Luau. Change damage, cooldowns, prices, chances, boss phases yourself without digging through core logic.</div>
 </section>
 
 <section id="pricing">
-<h2>Pricing and payments</h2>
-<p>Every commission is quoted based on the effort and time required. Please send a detailed description and I will give you a fair, fixed price before we start.</p>
+<h2>Pricing, simple</h2>
+<p>Price depends on how much work it is. Send details, I quote fast. No surprise fees.</p>
 <table>
 <tr><th>Scope</th><th>Price</th></tr>
 <tr><td>Minimum</td><td>10 dollars or 2,500 Robux</td></tr>
 <tr><td>Typical work range</td><td>10 to 250 dollars or 2,500 to 80,000 Robux</td></tr>
 <tr><td>Extended work / hiring</td><td>Message me for a quote</td></tr>
 </table>
-<div class="note"><strong>Payment terms: half upfront, half after completion.</strong> Higher upfront payment or full upfront payment gets higher priority in my queue. You receive progress clips before the final payment, and the full source with setup guide after the final payment. Seven day bug fix warranty included.</div>
-<p><strong>Teams and bulk orders.</strong> You can hire me for your team on an ongoing basis, or place bulk orders to save. Message me with your roadmap and I will propose a package.</p>
-<p><strong>Revenue share.</strong> I only accept revenue share from established games with 50 or more average concurrent players and a good history. Otherwise all work is fixed price.</p>
-<p><strong>How buyers can pay on stores.</strong> For store-based work I use Tebex Checkout, which supports PayPal, credit and debit cards, crypto, CashApp, Paysafecard, Razer Gold, Klarna, Afterpay, and many regional methods. Full list here: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a>. For direct Roblox commissions I accept PayPal and Robux at the rates above.</p>
+<div class="note"><strong>Half upfront, half after completion.</strong> Higher upfront payment or full upfront payment gets higher priority in my queue. Clips before final pay, full source plus setup guide after. 7 day bug fix warranty.</div>
+<p><strong>Teams and bulk.</strong> Want me on your team or got a big list? You save with bulk. Send the roadmap.</p>
+<p><strong>Revenue share.</strong> Only for live games doing 50 plus average players with solid history. Else fixed price.</p>
+<p>Store checkout accepts cards, PayPal, crypto, CashApp and more. Full list: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a>. Direct commissions: PayPal or Robux at the rates above.</p>
 </section>
 
 <section>
-<h2>How to commission me</h2>
-<p>To get an accurate quote quickly, please be very clear and detailed about exactly what you want made and its nuances. Include:</p>
+<h2>How this goes</h2>
 <ul class="clean">
-<li>Game type and link to your game or test place</li>
-<li>Exactly what you want made, with nuances and edge cases</li>
-<li>Reference games or videos showing the feel you want</li>
-<li>Deadline, budget range, and whether you prefer dollars or Robux</li>
+<li>You DM me what you want, with details. Game link helps a ton.</li>
+<li>I quote price and time. You pay half to lock the slot.</li>
+<li>I build, you get clips, you request tweaks.</li>
+<li>You pay rest, you get everything plus a walkthrough.</li>
 </ul>
-<div class="note">Example: “Third-person roguelike. I need a combo sword system with block, dash with invincibility frames, and a 3-phase boss that spawns minions at 50 percent health. Mobile support required. Deadline three weeks.” — This gets a same-day quote.</div>
+<div class="note">Hot tip: the more specific you are, the faster I quote. Good: combo sword with block and dash plus a 3 phase boss that spawns minions at half HP, mobile support, 3 weeks. That gets a same day answer.</div>
 </section>
 
 <section>
-<h2>Questions</h2>
-<details open><summary>Will you communicate during the project?</summary><p>Yes. I reply within 24 hours, usually much faster in Eastern Time. You will get milestone updates and clips. I do not disappear mid-commission.</p></details>
-<details><summary>Do you use free models?</summary><p>All scripting is hand-coded for your game. I am not a modeler, you must provide me the models you want to be used or I will use basic, placeholder models.</p></details>
-<details><summary>Will my data wipe? What about exploiters?</summary><p>I use session locking, server-side validation on every remote, rate limits, and retry queues. No system is perfectly exploiter-proof, but my standard is to never trust the client.</p></details>
-<details><summary>What do you need from me to start?</summary><p>Test place access, a prioritized feature list, and any user interface you already have. I will handle architecture and optimization.</p></details>
+<h2>Quick answers</h2>
+<details open><summary>Will you vanish mid project?</summary><p>Nope. I reply within a day, usually way faster. Clips, updates, straight answers.</p></details>
+<details><summary>Free models?</summary><p>Scripting is all hand coded for your game. I am not a modeler, you must provide me the models you want to be used or I will use basic, placeholder models.</p></details>
+<details><summary>Will exploiters nuke it?</summary><p>Nothing is 100 percent exploiter proof, but I validate everything on the server, limit remotes, and lock down data. Way harder to break than average.</p></details>
+<details><summary>What do you need to start?</summary><p>Test place access, list of features in order, any UI you have. I do the rest.</p></details>
+</section>
+
+<section>
+<h2>Backstory, short</h2>
+<p>Been coding since I was 12. Basement dev arc. Made my first <a href="proofs.html">5,000 dollars</a> as a kid. Roblox is my main thing now. <a href="experience.html">Full story plus my stack here.</a></p>
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
-<p>I am in <strong>Eastern Time</strong> and available often. My 12 AM is <span class="their-time">loading</span> for you. The fastest way to reach me is Discord. Please include your game type, the three most important systems, and your deadline.</p>
-<div class="card mono" style="font-size:14px">Discord: monsterchugger67 (FATE)<br>Currently: <span id="est-now">--</span> Eastern<br>My 12 AM is <span class="their-time">loading</span> for you</div>
+<h2>Hit me up</h2>
+<p>I live in <strong>Eastern Time</strong> and I am around a lot. My 12 AM is <span class="their-time">loading</span> for you. Fastest is Discord. Send game type plus your top 3 systems plus deadline.</p>
+<div class="card mono" style="font-size:14px">Discord: monsterchugger67<br>Right now for me: <span id="est-now">loading</span> Eastern<br>My 12 AM is <span class="their-time">loading</span> for you</div>
 <div class="btn-row">
 <a class="btn" href="https://discord.com/users/monsterchugger67" target="_blank">Message on Discord</a>
 <a class="btn2" href="#" onclick="copyDiscord();return false;">Copy Username</a>
 </div>
-<p style="color:var(--mut);font-size:14px">Thank you for considering me. I look forward to helping you ship your game.</p>
+<p style="color:var(--mut);font-size:14px">Thanks for stopping by. Lets ship your game.</p>
 </section>
 
-<footer><span>© 2026 FATE. Hand-coded, no template. No AI used.</span><span class="mono">Roblox · Luau · Python · Node.js</span></footer>
+<footer><span>© 2026 monsterchugger67. Hand-coded, no template. No AI used.</span><span class="mono">Roblox / Luau / Python / Node</span></footer>
 </div>
 <div id="toast">Copied</div>
 <script>
 const U="monsterchugger67";
-function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="Discord username copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);});}
+function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="Copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);});}
 function updateTimes(){
   try{
     const now=new Date();
     var estStr=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(now);
     var en=document.getElementById('est-now'); if(en) en.textContent=estStr;
-    // My 12 AM EST = 05:00 UTC. Format that instant in visitor local time.
     var ref=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),5,0,0));
     var local=new Intl.DateTimeFormat([],{hour:'numeric',minute:'2-digit'}).format(ref);
     document.querySelectorAll('.their-time').forEach(function(el){el.textContent=local;});
