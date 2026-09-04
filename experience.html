@@ -22,6 +22,13 @@ nav a.active{color:var(--fg);text-decoration:underline}
 h1{font-size:32px;letter-spacing:-.8px;margin:0 0 8px}
 h3{font-size:16px;margin-bottom:4px}
 video{width:100%;height:auto;display:block;background:#000}
+.clip-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.clip{border:1px solid var(--line);background:var(--bg);text-decoration:none;color:inherit;display:block}
+.clip video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;border-bottom:1px solid var(--line)}
+.clip .soon{aspect-ratio:16/9;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
+.clip span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
+.clip span b{color:var(--fg)}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:650;text-decoration:none;border:1px solid var(--fg)}
 .sub{color:var(--mut);max-width:620px}
 section{margin-top:56px}
 h2{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
@@ -31,7 +38,7 @@ p{margin:10px 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);border:1px solid var(--line);padding:1px 7px;border-radius:0;font-size:13px}
 footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}.clip-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -48,7 +55,17 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h2>ROBLOX [MAIN]</h2>
 <p>This is what I sell and what I am best at. Combat that feels good, movement players love, anticheats that hold up, data that does not randomly wipe, mobs and quests, shops and inventories.</p>
 <p>Everything ships with a config you can read and comments that make sense. You tweak numbers, I handle the scary backend parts.</p>
-<a href="videos/parkour.html" style="text-decoration:none;color:inherit"><div class="card"><video src="videos/0904.mp4" preload="metadata" muted playsinline></video><p><strong style="color:var(--fg)">Parkour/Movement system.</strong> Click to watch the full clip with details.</p></div></a>
+<div class="clip-grid">
+<a class="clip" href="videos/parkour.html"><video src="videos/0904.mp4" preload="metadata" muted playsinline></video><span><b>Parkour/Movement system.</b> R6 wall running, sliding, vaulting and more.</span></a>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+<div class="clip"><div class="soon">soon</div><span>Coming soon.</span></div>
+</div>
+<p><a class="btn" href="clips.html">VIEW MORE</a></p>
 </section>
 
 <section>
