@@ -3,152 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>fate — roblox developer</title>
-<meta name="description" content="Roblox systems developer. Combat, movement, AI, datastores, discord bots, full game frameworks. 6+ years, $5k+ earned, 150+ transactions.">
+<title>FATE — Roblox Developer for Hire</title>
+<meta name="description" content="Roblox developer for commissions. Combat, movement, anticheats, backend, datastores, AI, full game frameworks. Communicative, on-time, optimized.">
 <style>
-:root{--bg:#fff;--fg:#111;--mut:#666;--line:#e5e5e5;--code:#f4f4f4}
-@media(prefers-color-scheme:dark){:root{--bg:#0a0a0a;--fg:#ededed;--mut:#999;--line:#262626;--code:#141414}}
+:root{--bg:#fff;--fg:#161616;--mut:#5f5f5f;--line:#e7e7e7;--soft:#f7f7f7;--radius:8px}
+@media(prefers-color-scheme:dark){:root{--bg:#0b0b0b;--fg:#ececec;--mut:#a3a3a3;--line:#242424;--soft:#131313}}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--bg);color:var(--fg);font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
 a{color:inherit;text-underline-offset:3px}
-.wrap{max-width:680px;margin:0 auto;padding:0 20px 80px}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);margin-bottom:32px}
-header b{font-size:14px}
-nav{display:flex;gap:16px;font-size:13px;color:var(--mut)}
-nav a:hover{color:var(--fg)}
-h1{font-size:28px;line-height:1.2;letter-spacing:-.5px;font-weight:700}
-h2{font-size:14px;text-transform:uppercase;letter-spacing:1px;margin:48px 0 12px;color:var(--mut);font-weight:400}
-h2::before{content:"# "}
-p{margin:10px 0}
-.mut{color:var(--mut)}
-.small{font-size:13px}
-hr{border:0;border-top:1px solid var(--line);margin:32px 0}
-ul,ol{margin:10px 0 10px 20px}
-li{margin:4px 0}
-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
-th,td{text-align:left;padding:8px 10px;border:1px solid var(--line)}
-th{color:var(--mut);font-weight:400}
-pre{background:var(--code);border:1px solid var(--line);padding:12px;overflow-x:auto;font-size:13px;border-radius:4px}
-code{background:var(--code);border:1px solid var(--line);padding:1px 5px;border-radius:3px;font-size:12.5px}
-.box{border:1px solid var(--line);padding:16px;border-radius:4px;margin:12px 0}
-.row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
-.btn{border:1px solid var(--fg);padding:8px 14px;border-radius:3px;text-decoration:none;font-size:13px;background:var(--fg);color:var(--bg)}
-.btn2{border:1px solid var(--line);padding:8px 14px;border-radius:3px;text-decoration:none;font-size:13px;background:transparent}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px 100px}
+header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:56px}
+header .brand{font-weight:650;font-size:15px;letter-spacing:-.2px}
+header .brand span{color:var(--mut);font-weight:400}
+nav{display:flex;gap:20px;font-size:14px;color:var(--mut)}
+nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
+.badge{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:6px 14px;margin-bottom:20px}
+h1{font-size:40px;line-height:1.12;letter-spacing:-1.2px;font-weight:700;margin:0 0 16px}
+.lead{font-size:17px;color:var(--mut);max-width:620px}
+.lead strong{color:var(--fg);font-weight:600}
+section{margin-top:72px}
+h2{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin-bottom:6px;letter-spacing:-.2px}
+p{margin:12px 0}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin:14px 0;background:var(--bg)}
+.card p{color:var(--mut);font-size:15px;margin:6px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;font-size:15px;padding:6px 0}
+.kv dt{color:var(--mut)} .kv dd{margin:0}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+th,td{text-align:left;padding:12px 14px;border:1px solid var(--line);vertical-align:top}
+th{background:var(--soft);color:var(--mut);font-weight:500;font-size:13px}
+ul.clean{list-style:none;margin:12px 0}
+ul.clean li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var(--line);font-size:15px}
+ul.clean li:last-child{border-bottom:0}
+ul.clean li::before{content:"—";position:absolute;left:0;color:var(--mut)}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:6px;font-size:14.5px;font-weight:600;text-decoration:none;border:1px solid var(--fg)}
+.btn2{display:inline-block;background:transparent;color:var(--fg);padding:12px 22px;border-radius:6px;font-size:14.5px;font-weight:500;text-decoration:none;border:1px solid var(--line)}
 .btn2:hover{border-color:var(--fg)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:12px 0}
-.grid div{background:var(--bg);padding:12px;font-size:13px}
-.grid b{display:block;font-size:13px;margin-bottom:4px}
-details{border:1px solid var(--line);border-radius:4px;padding:10px 12px;margin:8px 0}
-summary{cursor:pointer}
-details p{color:var(--mut);font-size:13px}
-footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--line);color:var(--mut);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-#toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:13px;padding:8px 14px;border-radius:3px;opacity:0;transition:.2s;pointer-events:none}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14.5px;color:var(--mut);margin:16px 0}
+.note strong{color:var(--fg)}
+details{border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;margin:10px 0}
+summary{cursor:pointer;font-weight:600;font-size:15px}
+details p{color:var(--mut);font-size:14.5px}
+footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:14px;padding:10px 18px;border-radius:6px;opacity:0;transition:.2s;pointer-events:none}
 #toast.show{opacity:1}
-@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:24px}}
+@media(max-width:640px){h1{font-size:30px}.grid2{grid-template-columns:1fr}.kv{grid-template-columns:1fr}.kv dt{margin-top:8px}header{margin-bottom:36px}}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-<b>fate / monsterchugger67</b>
-<nav><a href="#work">work</a><a href="#systems">systems</a><a href="#payments">payments</a><a href="#contact">contact</a></nav>
+<div class="brand">FATE <span>/ monsterchugger67 — Roblox Developer</span></div>
+<nav><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 
-<p class="small mut">● available for commissions — gmt+1, replies &lt;24h — <span id="clock">--:--:--</span></p>
-<h1>roblox systems developer.</h1>
-<p>i build full games, not buggy scripts. combat, movement, ai/bosses, datastores, inventories, matchmaking, shops, discord–roblox bots. server-authoritative, optimized, documented.</p>
+<div class="badge"><span id="dot">●</span> Available for commissions · Eastern Time · Replies within 24 hours · <span id="clock">--:--</span> EST</div>
+<h1>Roblox developer for hire.</h1>
+<p class="lead">Hello, I'm <strong>FATE</strong>. I build complete, scalable Roblox systems — combat, movement, top-tier anticheats, backend and data, AI and bosses, and full game frameworks. You will receive your commission <strong>on time, high quality, and brutally optimized</strong>.</p>
+<p class="lead">I am very communicative and will not ghost you. If you are clear and detailed about what you want, I will handle the rest.</p>
 
-<div class="row">
-<a class="btn" href="#contact">hire me</a>
-<a class="btn2" href="#" onclick="copyDiscord();return false;">copy discord: monsterchugger67</a>
+<div class="btn-row">
+<a class="btn" href="#contact">Commission Me</a>
+<a class="btn2" href="#" onclick="copyDiscord();return false;">Copy Discord</a>
 </div>
 
-<pre>6+ yrs game dev / 3+ yrs luau / 4+ yrs discord bots / 5+ yrs minecraft
-$5,392+ tracked / 150+ paid transactions / 40+ systems shipped</pre>
+<section>
+<h2>Why hire me</h2>
+<div class="grid2">
+<div class="card"><h3>On time, every time</h3><p>Clear timeline agreed upfront. Milestone updates with clips, so you always know where things stand.</p></div>
+<div class="card"><h3>Built to scale</h3><p>Server-authoritative code, clean architecture, commented and documented. Future developers can extend it.</p></div>
+<div class="card"><h3>Brutally optimized</h3><p>Low server milliseconds, FPS-safe client code, no memory leaks. Tested for real player counts.</p></div>
+<div class="card"><h3>Easy to work with</h3><p>Polite, responsive, honest about scope. If something is a bad idea for your game, I will tell you.</p></div>
+</div>
+</section>
 
-<h2>about</h2>
-<p>game dev enthusiast. coding since i was 12, made $5k as a kid.</p>
-<ul>
-<li><b>6+ years</b> <span class="mut">game dev + programming</span></li>
-<li><b>3+ years</b> <span class="mut">luau — client + server architecture</span></li>
-<li><b>4+ years</b> <span class="mut">discord bots, python + node.js, discord ↔ roblox linked</span></li>
-<li><b>5+ years</b> <span class="mut">minecraft mods / plugins / skripts</span></li>
-</ul>
-<p class="small mut">stack: <code>luau</code> <code>python</code> <code>java</code> <code>javascript</code> <code>css</code> <code>react</code> <code>node.js</code></p>
+<section id="services">
+<h2>What I build — Roblox</h2>
+<p>I work exclusively in Roblox commissions. Everything below is server-validated and exploiter-resistant by default.</p>
 
-<h2 id="work">proof</h2>
-<p class="small mut">aggregates only. no customer data shown.</p>
+<div class="card"><h3>Gameplay systems</h3><p>Movement systems, combat systems with hitboxes and combos, abilities, classes, loadouts, custom mechanics. Mobile and controller support.</p></div>
+<div class="card"><h3>Top-tier anticheats</h3><p>Server-side movement sanity checks, anti fly, speed, teleport and noclip. Remote event validation and rate limiting, anti damage and economy spoofing, staff flagging and logs. No system that trusts the client.</p></div>
+<div class="card"><h3>Backend and data</h3><p>DataStores with session locking and retry queues so data does not wipe. Cross-server systems, matchmaking, rounds, teleportation, global leaderboards. Debugging and optimization of existing games.</p></div>
+<div class="card"><h3>AI, bosses and world</h3><p>NPCs and AI, multi-phase bosses, waves, minions, dialogue, quests, cutscenes, progression, rebirths, skill trees, stats and levels.</p></div>
+<div class="card"><h3>Economy and monetization</h3><p>Inventories, shops, trading, crafting, loot and chests, random generation, upgrades, rewards, gamepass and developer product wiring.</p></div>
+<div class="card"><h3>Discord to Roblox integration</h3><p>Verification bots, purchase and ban logs, economy sync and dashboards. Built with Python or Node.js.</p></div>
+
+<details><summary>Full list of systems I have shipped</summary>
+<p>Combat, movement, AI, bosses, NPCs, DataStores, inventories, rounds, matchmaking, quests, dialogue, economy, random generation, progression, rebirths, shops, trading, crafting, abilities, card and deck systems, waves, leaderboards, rewards, monetization, teleportation, cutscenes, loot, chests, upgrades, skill trees, stats, experience and levels, classes, loadouts, custom mechanics, and full game frameworks with interconnected servers.</p>
+<p>Languages: Luau, Python, JavaScript, Java, CSS, React, Node.js.</p>
+</details>
+</section>
+
+<section id="experience">
+<h2>Past experience</h2>
+<p>Minecraft development is past experience only. I do not take Minecraft commissions at this time. It is shown here to demonstrate that I have shipped paid work and handled real money responsibly.</p>
 <table>
-<tr><th>source</th><th>amount</th><th>note</th></tr>
-<tr><td>tebex — minecraft (stealify store)</td><td>$4,659.45 all-time</td><td>$753.65 ytd, 150+ transactions</td></tr>
-<tr><td>paypal — roblox commissions</td><td>$1,233.56 balance</td><td>direct client work, repeats + referrals</td></tr>
+<tr><th>Work</th><th>Result</th></tr>
+<tr><td>Tebex store — Stealify Store (Minecraft plugins and content)</td><td>4,659.45 dollars in all time sales, 753.65 dollars year to date, more than 150 paid transactions</td></tr>
+<tr><td>Roblox scripting commissions (PayPal)</td><td>1,233.56 dollar balance snapshot, plus ongoing payouts. Repeat clients and referrals for custom systems, backend work, and fixes.</td></tr>
 </table>
-<p class="small">most scripters show clips. i show stores that sold + clients that paid.</p>
+<p style="color:var(--mut);font-size:14.5px">Customer details are kept private. Figures above are aggregates only. In total, more than 5,000 dollars earned.</p>
+</section>
 
-<h2 id="systems">what i build</h2>
-<div class="grid">
-<div><b>combat + movement</b><span class="mut">movement, combat, abilities, loadouts, classes, custom mechanics. hitboxes, combos, dash, mobile + controller.</span></div>
-<div><b>ai + world</b><span class="mut">ai / npcs, bosses + phases, waves, rounds, matchmaking, teleportation.</span></div>
-<div><b>backend + data</b><span class="mut">datastores w/ session locking, client/server arch, cross-server systems, debugging, optimization.</span></div>
-<div><b>progression</b><span class="mut">xp/levels, stats, skill trees, upgrades, quests, dialogue, rebirths.</span></div>
-<div><b>economy</b><span class="mut">economy, shops, trading, crafting, loot/chests, rng, inventories, card/deck.</span></div>
-<div><b>liveops</b><span class="mut">leaderboards, rewards, monetization, cutscenes, discord bots, full frameworks.</span></div>
-</div>
-<p class="small mut">standard: server validates everything, no trust-the-client, profile-style saving with retries, knit/oop structure, commented + loom walkthrough.</p>
+<section id="pricing">
+<h2>Pricing and payments</h2>
+<p>Every commission is quoted based on the effort and time required. Please send a detailed description and I will give you a fair, fixed price before we start.</p>
+<table>
+<tr><th></th><th>US Dollars</th><th>Robux</th></tr>
+<tr><td>Minimum commission</td><td>10 dollars</td><td>2,500 Robux</td></tr>
+<tr><td>Typical range</td><td>10 to 250 dollars</td><td>2,500 to 80,000 Robux</td></tr>
+<tr><td>Large frameworks</td><td>around 300 dollars equivalent</td><td>around 80,000 Robux</td></tr>
+</table>
+<div class="note"><strong>Payment terms: half upfront, half after completion.</strong> You receive progress clips before the final payment, and the full source with setup guide after the final payment. Seven day bug fix warranty included.</div>
+<p><strong>Teams and bulk orders.</strong> You can hire me for your team on an ongoing basis, or place bulk orders to save. Message me with your roadmap and I will propose a package.</p>
+<p><strong>Revenue share.</strong> I only accept revenue share from established games with 50 or more average concurrent players and a good history. Otherwise all work is fixed price.</p>
+<p><strong>How buyers can pay on stores.</strong> For store-based work I use Tebex Checkout, which supports PayPal, credit and debit cards, crypto, CashApp, Paysafecard, Razer Gold, Klarna, Afterpay, and many regional methods. Full list here: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a>. For direct Roblox commissions I accept PayPal and Robux at the rates above.</p>
+</section>
 
-<h2>commissions</h2>
-<div class="box"><b>combat / movement / bosses</b> — from $80/system<br><span class="mut small">hitboxes, blocking, boss ai, damage numbers, vfx wiring.</span></div>
-<div class="box"><b>full game framework</b> — from $300 <span class="small mut">[most value]</span><br><span class="mut small">data + inventory + shop + quests + saves + teleports + admin + monetization.</span></div>
-<div class="box"><b>backend + discord ↔ roblox</b> — from $60<br><span class="mut small">no-wipe saves, global boards, verification bots, purchase/ban logs.</span></div>
-<p class="small mut">also: fixing other devs' broken games, optimization passes (server ms / fps / memory).</p>
-
-<h2 id="payments">payments</h2>
-<p>i accept direct paypal for roblox commissions. for store-based work i use tebex checkout.</p>
-<p class="small">via tebex, buyers can pay with:</p>
-<ul class="small">
-<li>paypal (global)</li>
-<li>credit / debit cards (visa, mc, amex — global)</li>
-<li>crypto</li>
-<li>cashapp (us), paysafecard, razer gold pin/wallet</li>
-<li>klarna, afterpay, ideal, blik, pix, oxxo, + 70 regionals</li>
+<section>
+<h2>How to commission me</h2>
+<p>To get an accurate quote quickly, please be very clear and detailed. Include:</p>
+<ul class="clean">
+<li>Game type and link to your game or test place</li>
+<li>Exactly what you want made, with nuances and edge cases</li>
+<li>Reference games or videos showing the feel you want</li>
+<li>Deadline, budget range, and whether you prefer dollars or Robux</li>
 </ul>
-<p class="small mut">full list: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a></p>
-<div class="box small">terms: deposit upfront, milestones on big builds. clips before final, source after final. 7-day bugfix warranty. paypal for commissions, tebex for store products.</div>
+<div class="note">Example: “Third-person roguelike. I need a combo sword system with block, dash with invincibility frames, and a 3-phase boss that spawns minions at 50 percent health. Mobile support required. Deadline three weeks.” — This gets a same-day quote.</div>
+</section>
 
-<h2>process</h2>
-<ol class="small">
-<li>dm ref game + 3 must-haves → i quote scope/price/time</li>
-<li>deposit → start. big = milestones.</li>
-<li>build + clips → tweaks.</li>
-<li>delivery: source + setup guide + walkthrough.</li>
-</ol>
+<section>
+<h2>Questions</h2>
+<details open><summary>Will you communicate during the project?</summary><p>Yes. I reply within 24 hours, usually much faster in Eastern Time. You will get milestone updates and clips. I do not disappear mid-commission.</p></details>
+<details><summary>Do you use free models?</summary><p>No. Everything is hand-coded for your game and structured so it can be extended later.</p></details>
+<details><summary>Will my data wipe? What about exploiters?</summary><p>I use session locking, server-side validation on every remote, rate limits, and retry queues. No system is perfectly exploiter-proof, but my standard is to never trust the client.</p></details>
+<details><summary>What do you need from me to start?</summary><p>Test place access, a prioritized feature list, and any user interface you already have. I will handle architecture and optimization.</p></details>
+</section>
 
-<h2>faq</h2>
-<details><summary>free models?</summary><p>no. hand-coded, server-authoritative, extendable.</p></details>
-<details><summary>data wipes / exploiters?</summary><p>session locking, server checks on every remote, rate limits, retry queues. nothing is 100%, but i don't trust the client.</p></details>
-<details><summary>rev-share?</summary><p>only if team + funding already solid. otherwise fixed-price.</p></details>
-<details><summary>need from me?</summary><p>test place access, feature list in priority order, any ui you have.</p></details>
-
-<h2 id="contact">contact</h2>
-<p>fastest on discord. send: game type + 3 systems + deadline.</p>
-<pre>discord: monsterchugger67 [FATE]
-roblox: playing daily
-timezone: gmt+1 / <span id="clock2">--</span></pre>
-<div class="row">
-<a class="btn" href="https://discord.com/users/monsterchugger67" target="_blank">dm on discord</a>
-<a class="btn2" href="https://www.roblox.com/users/profile" target="_blank">roblox profile</a>
-<a class="btn2" href="#" onclick="copyDiscord();return false;">copy username</a>
+<section id="contact">
+<h2>Contact</h2>
+<p>I am in <strong>Eastern Time</strong> and available often. The fastest way to reach me is Discord. Please include your game type, the three most important systems, and your deadline.</p>
+<div class="card mono" style="font-size:14px">Discord: monsterchugger67 (FATE)<br>Roblox: active daily<br>Local time: <span id="clock2">--:--</span> EST</div>
+<div class="btn-row">
+<a class="btn" href="https://discord.com/users/monsterchugger67" target="_blank">Message on Discord</a>
+<a class="btn2" href="https://www.roblox.com/users/profile" target="_blank">Roblox Profile</a>
+<a class="btn2" href="#" onclick="copyDiscord();return false;">Copy Username</a>
 </div>
+<p style="color:var(--mut);font-size:14px">Thank you for considering me. I look forward to helping you ship your game.</p>
+</section>
 
-<footer><span>© 2026 fate — no template, hand-coded.</span><span>luau / python / node</span></footer>
+<footer><span>© 2026 FATE. Hand-coded, no template.</span><span class="mono">Roblox · Luau · Python · Node.js</span></footer>
 </div>
-<div id="toast">copied</div>
+<div id="toast">Copied</div>
 <script>
 const U="monsterchugger67";
-function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);});}
-function tick(){try{const o={timeZone:'Europe/Berlin',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false};const s=new Intl.DateTimeFormat('en-GB',o).format(new Date());document.getElementById('clock').textContent=s+" gmt+1";document.getElementById('clock2').textContent=s;}catch(e){}}
-setInterval(tick,1000);tick();
+function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="Discord username copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);});}
+function tick(){try{const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',hour12:true});const s=f.format(new Date())+" EST";document.getElementById('clock').textContent=s;document.getElementById('clock2').textContent=s;}catch(e){}}
+setInterval(tick,15000);tick();
 </script>
 </body>
 </html>
