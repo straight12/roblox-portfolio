@@ -14,8 +14,9 @@ body{background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSy
 a{color:inherit;text-underline-offset:3px}
 .wrap{max-width:720px;margin:0 auto;padding:0 24px 100px}
 header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:48px;gap:12px;flex-wrap:wrap}
-header .brand{font-weight:700;font-size:15px}
+header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--fg);text-decoration:none}
 header .brand span{color:var(--mut);font-weight:400}
+.avatar{width:32px;height:32px;object-fit:cover;display:block;border:1px solid var(--line)}
 nav{display:flex;gap:18px;font-size:14px;color:var(--mut);flex-wrap:wrap}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
 .badge{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);border:1px solid var(--line);background:var(--soft);border-radius:0;padding:6px 14px;margin-bottom:20px}
@@ -56,13 +57,13 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background
 <div class="wrap">
 
 <header>
-<div class="brand">monsterchugger67 <span>/ roblox scripter</span></div>
+<a class="brand" href="index.html"><img class="avatar" src="roach.png" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ roblox scripter</span></a>
 <nav><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="proofs.html">Proofs</a><a href="experience.html">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 
 <div class="badge">Commission status: open</div>
 <h1>I make Roblox stuff that works.</h1>
-<p class="lead">Hey, I am <strong>monsterchugger67</strong>. Combat, movement, anticheats, data, Mob AI / Actual AI Integration, the whole backend mess you never want to touch. You tell me what you want, I build it clean and it ships on time. No vanishing act, promise. I have bills too.</p>
+<p class="lead">Hey, I am <strong>monsterchugger67</strong>. Combat, movement, anticheats, data, Mob AI / Actual AI Integration, the whole backend mess you never want to touch. You tell me what you want, I build it clean and you get it right on time. No vanishing act, promise. I have bills too.</p>
 <p class="lead">Made <a href="proofs.html">over 5,000 dollars</a> doing this. <a href="proofs.html">Receipts here.</a></p>
 
 <div class="btn-row">
@@ -74,8 +75,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background
 <section>
 <h2>Why me (besides my charming personality)</h2>
 <div class="grid2">
-<div class="card"><h3>Clean code</h3><p>Config file you can actually read. Well commented Luau. Tweak numbers yourself like a big shot, no headache.</p></div>
 <div class="card"><h3>On time</h3><p>We agree a date. You get clips along the way. It lands when I say it lands.</p></div>
+<div class="card"><h3>Clean code</h3><p>Config file you can actually read. Well commented Luau. Tweak numbers yourself like a big shot, no headache.</p></div>
 <div class="card"><h3>Fast code</h3><p>Low lag, no memory leaks, runs fine on your cousin's potato phone too.</p></div>
 <div class="card"><h3>Easy to reach</h3><p>Ask me anything. If your idea will explode later, I will tell you straight instead of smiling and billing you.</p></div>
 </div>

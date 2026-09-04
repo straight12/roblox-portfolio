@@ -13,8 +13,9 @@ body{background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSy
 a{color:inherit;text-underline-offset:3px}
 .wrap{max-width:720px;margin:0 auto;padding:0 24px 100px}
 header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:40px;gap:12px;flex-wrap:wrap}
-header .brand{font-weight:700;font-size:15px}
+header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--fg);text-decoration:none}
 header .brand span{color:var(--mut);font-weight:400}
+.avatar{width:32px;height:32px;object-fit:cover;display:block;border:1px solid var(--line)}
 nav{display:flex;gap:18px;font-size:14px;color:var(--mut);flex-wrap:wrap}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
 h1{font-size:32px;letter-spacing:-.8px;margin:0 0 8px}
@@ -34,11 +35,11 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <body>
 <div class="wrap">
 <header>
-<div class="brand">monsterchugger67 <span>/ experience</span></div>
+<a class="brand" href="index.html"><img class="avatar" src="roach.png" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ experience</span></a>
 <nav><a href="index.html">Home</a><a href="proofs.html">Proofs</a><a href="index.html#pricing">Pricing</a><a href="index.html#contact">Contact</a></nav>
 </header>
 
-<h1>How I got here.</h1>
+<h1>Experience and How I got here.</h1>
 <p class="sub">Roblox scripter. Minecraft Modder. Discord Bot Dev. Web-Game/Web-Dev.</p>
 
 <section>

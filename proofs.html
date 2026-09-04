@@ -13,8 +13,9 @@ body{background:var(--bg);color:var(--fg);font:16px/1.7 -apple-system,BlinkMacSy
 a{color:inherit;text-underline-offset:3px}
 .wrap{max-width:860px;margin:0 auto;padding:0 24px 100px}
 header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);margin-bottom:36px;gap:12px;flex-wrap:wrap}
-header .brand{font-weight:700;font-size:15px}
+header .brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:var(--fg);text-decoration:none}
 header .brand span{color:var(--mut);font-weight:400}
+.avatar{width:32px;height:32px;object-fit:cover;display:block;border:1px solid var(--line)}
 nav{display:flex;gap:18px;font-size:14px;color:var(--mut)}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
 h1{font-size:32px;letter-spacing:-.8px;margin:0 0 8px}
@@ -31,11 +32,11 @@ footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);color:v
 <body>
 <div class="wrap">
 <header>
-<div class="brand">monsterchugger67 <span>/ proofs</span></div>
+<a class="brand" href="index.html"><img class="avatar" src="roach.png" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ proofs</span></a>
 <nav><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="index.html#contact">Contact</a></nav>
 </header>
 
-<h1>Proofs. Real money, not vibes.</h1>
+<h1>Proofs</h1>
 <p class="sub">Tebex covers both Roblox commissions and Minecraft mod, plugin and Skript commissions. PayPal is direct Roblox scripting pay. Names, IDs and card numbers are blacked out. Obviously.</p>
 
 <div class="note">The numbers: <strong style="color:var(--fg)">4,659.45 dollars all time on Tebex</strong>, 753.65 dollars year to date, 150 plus paid orders, plus <strong style="color:var(--fg)">1,233.56 dollars on PayPal</strong> from Roblox work.</div>
