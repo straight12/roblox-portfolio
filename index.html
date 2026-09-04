@@ -6,7 +6,7 @@
 <title>FATE — Roblox Developer for Hire</title>
 <meta name="description" content="Roblox developer for commissions. Combat, movement, anticheats, backend, datastores, AI, full game frameworks. Communicative, on-time, optimized.">
 <style>
-:root{--bg:#fff;--fg:#161616;--mut:#5f5f5f;--line:#e7e7e7;--soft:#f7f7f7;--radius:8px}
+:root{--bg:#fff;--fg:#161616;--mut:#5f5f5f;--line:#e7e7e7;--soft:#f7f7f7;--radius:0}
 @media(prefers-color-scheme:dark){:root{--bg:#0b0b0b;--fg:#ececec;--mut:#a3a3a3;--line:#242424;--soft:#131313}}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:var(--bg);color:var(--fg);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
@@ -18,7 +18,7 @@ header .brand{font-weight:650;font-size:15px;letter-spacing:-.2px}
 header .brand span{color:var(--mut);font-weight:400}
 nav{display:flex;gap:20px;font-size:14px;color:var(--mut)}
 nav a{text-decoration:none} nav a:hover{color:var(--fg);text-decoration:underline}
-.badge{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:6px 14px;margin-bottom:20px}
+.badge{display:inline-block;font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);border:1px solid var(--line);background:var(--soft);border-radius:0;padding:6px 14px;margin-bottom:20px}
 h1{font-size:40px;line-height:1.12;letter-spacing:-1.2px;font-weight:700;margin:0 0 16px}
 .lead{font-size:17px;color:var(--mut);max-width:620px}
 .lead strong{color:var(--fg);font-weight:600}
@@ -26,11 +26,9 @@ section{margin-top:72px}
 h2{font-size:13px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--mut);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 h3{font-size:17px;margin-bottom:6px;letter-spacing:-.2px}
 p{margin:12px 0}
-.card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin:14px 0;background:var(--bg)}
+.card{border:1px solid var(--line);border-radius:0;padding:24px;margin:14px 0;background:var(--bg)}
 .card p{color:var(--mut);font-size:15px;margin:6px 0 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.kv{display:grid;grid-template-columns:170px 1fr;gap:8px 16px;font-size:15px;padding:6px 0}
-.kv dt{color:var(--mut)} .kv dd{margin:0}
 table{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
 th,td{text-align:left;padding:12px 14px;border:1px solid var(--line);vertical-align:top}
 th{background:var(--soft);color:var(--mut);font-weight:500;font-size:13px}
@@ -39,18 +37,23 @@ ul.clean li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid var
 ul.clean li:last-child{border-bottom:0}
 ul.clean li::before{content:"—";position:absolute;left:0;color:var(--mut)}
 .btn-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:6px;font-size:14.5px;font-weight:600;text-decoration:none;border:1px solid var(--fg)}
-.btn2{display:inline-block;background:transparent;color:var(--fg);padding:12px 22px;border-radius:6px;font-size:14.5px;font-weight:500;text-decoration:none;border:1px solid var(--line)}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:600;text-decoration:none;border:1px solid var(--fg)}
+.btn2{display:inline-block;background:transparent;color:var(--fg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:500;text-decoration:none;border:1px solid var(--line)}
 .btn2:hover{border-color:var(--fg)}
-.note{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;font-size:14.5px;color:var(--mut);margin:16px 0}
+.note{background:var(--soft);border:1px solid var(--line);border-radius:0;padding:18px 20px;font-size:14.5px;color:var(--mut);margin:16px 0}
 .note strong{color:var(--fg)}
-details{border:1px solid var(--line);border-radius:var(--radius);padding:14px 18px;margin:10px 0}
+figure{border:1px solid var(--line);border-radius:0;margin:14px 0;background:var(--bg)}
+figure img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line);background:var(--soft)}
+figure figcaption{padding:16px 18px;font-size:14px}
+figure figcaption b{display:block;font-size:14.5px;margin-bottom:4px}
+figure figcaption span{color:var(--mut)}
+details{border:1px solid var(--line);border-radius:0;padding:14px 18px;margin:10px 0}
 summary{cursor:pointer;font-weight:600;font-size:15px}
 details p{color:var(--mut);font-size:14.5px}
 footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:14px;padding:10px 18px;border-radius:6px;opacity:0;transition:.2s;pointer-events:none}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--fg);color:var(--bg);font-size:14px;padding:10px 18px;border-radius:0;opacity:0;transition:.2s;pointer-events:none}
 #toast.show{opacity:1}
-@media(max-width:640px){h1{font-size:30px}.grid2{grid-template-columns:1fr}.kv{grid-template-columns:1fr}.kv dt{margin-top:8px}header{margin-bottom:36px}}
+@media(max-width:640px){h1{font-size:30px}.grid2{grid-template-columns:1fr}header{margin-bottom:36px}}
 </style>
 </head>
 <body>
@@ -58,13 +61,13 @@ footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <header>
 <div class="brand">FATE <span>/ monsterchugger67 — Roblox Developer</span></div>
-<nav><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+<nav><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#proofs">Proofs</a><a href="#contact">Contact</a></nav>
 </header>
 
-<div class="badge"><span id="dot">●</span> Available for commissions · Eastern Time · Replies within 24 hours · <span id="clock">--:--</span> EST</div>
+<div class="badge">● Available for commissions · Eastern Time · My 12 AM is <span class="their-time">loading</span> for you · Replies within 24 hours</div>
 <h1>Roblox developer for hire.</h1>
 <p class="lead">Hello, I'm <strong>FATE</strong>. I build complete, scalable Roblox systems — combat, movement, top-tier anticheats, backend and data, AI and bosses, and full game frameworks. You will receive your commission <strong>on time, high quality, and brutally optimized</strong>.</p>
-<p class="lead">I am very communicative and will not ghost you. If you are clear and detailed about what you want, I will handle the rest.</p>
+<p class="lead">I am very communicative and will not ghost you. If you are clear and detailed about what you want, I will handle the rest. So far I have earned <a href="#proofs">more than 5,000 dollars</a> from game development work.</p>
 
 <div class="btn-row">
 <a class="btn" href="#contact">Commission Me</a>
@@ -100,25 +103,50 @@ footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <section id="experience">
 <h2>Past experience</h2>
-<p>Minecraft development is past experience only. I do not take Minecraft commissions at this time. It is shown here to demonstrate that I have shipped paid work and handled real money responsibly.</p>
+<p>Minecraft development is past experience only. I do not take Minecraft commissions at this time. It is shown here to demonstrate that I have shipped paid work and handled real money responsibly. Screenshots are in the <a href="#proofs">proofs section below</a>.</p>
 <table>
 <tr><th>Work</th><th>Result</th></tr>
-<tr><td>Tebex store — Stealify Store (Minecraft plugins and content)</td><td>4,659.45 dollars in all time sales, 753.65 dollars year to date, more than 150 paid transactions</td></tr>
-<tr><td>Roblox scripting commissions (PayPal)</td><td>1,233.56 dollar balance snapshot, plus ongoing payouts. Repeat clients and referrals for custom systems, backend work, and fixes.</td></tr>
+<tr><td>Tebex store — Stealify Store (Minecraft plugins and content)</td><td><a href="#proofs">4,659.45 dollars in all time sales</a>, <a href="#proofs">753.65 dollars year to date</a>, <a href="#proofs">more than 150 paid transactions</a></td></tr>
+<tr><td>Roblox scripting commissions (PayPal)</td><td><a href="#proofs">1,233.56 dollar balance snapshot</a>, plus ongoing payouts. Repeat clients and referrals for custom systems, backend work, and fixes.</td></tr>
 </table>
-<p style="color:var(--mut);font-size:14.5px">Customer details are kept private. Figures above are aggregates only. In total, more than 5,000 dollars earned.</p>
+<p style="color:var(--mut);font-size:14.5px">Customer details are kept private. Figures above are aggregates only.</p>
+</section>
+
+<section id="proofs">
+<h2>Proofs</h2>
+<p>All figures are aggregates. Private customer names, transaction IDs, and card numbers are redacted. To show these on your live site, save your screenshots into the <span class="mono">proofs/</span> folder in this repo with the file names below.</p>
+
+<figure>
+<img src="proofs/tebex-overview.png" alt="Tebex overview showing all time sales" loading="lazy" onerror="this.style.display='none'">
+<figcaption><b>Tebex overview — Stealify Store</b><span>Shows 4,659.45 dollars in all time sales and 753.65 dollars year to date from Minecraft store content. This is past experience and proof I can build content people pay for. Expected file: proofs/tebex-overview.png</span></figcaption>
+</figure>
+
+<figure>
+<img src="proofs/tebex-payments.png" alt="Tebex payments list showing many transactions" loading="lazy" onerror="this.style.display='none'">
+<figcaption><b>Tebex payments — transaction history</b><span>Shows more than 150 paid transactions from real buyers. Demonstrates consistent sales over time, not a one-off. Expected file: proofs/tebex-payments.png</span></figcaption>
+</figure>
+
+<figure>
+<img src="proofs/paypal.png" alt="PayPal balance from Roblox commissions" loading="lazy" onerror="this.style.display='none'">
+<figcaption><b>PayPal — Roblox commissions</b><span>Shows a 1,233.56 dollar available balance from direct Roblox scripting commissions. Cards and personal activity redacted. Expected file: proofs/paypal.png</span></figcaption>
+</figure>
+
+<figure>
+<img src="proofs/about.png" alt="Original about me portfolio section" loading="lazy" onerror="this.style.display='none'">
+<figcaption><b>Original portfolio — about section</b><span>My earlier portfolio stating six years of game development, Luau scripting, Discord bots, and Minecraft plugins. Included for continuity. Expected file: proofs/about.png</span></figcaption>
+</figure>
 </section>
 
 <section id="pricing">
 <h2>Pricing and payments</h2>
 <p>Every commission is quoted based on the effort and time required. Please send a detailed description and I will give you a fair, fixed price before we start.</p>
 <table>
-<tr><th></th><th>US Dollars</th><th>Robux</th></tr>
-<tr><td>Minimum commission</td><td>10 dollars</td><td>2,500 Robux</td></tr>
-<tr><td>Typical range</td><td>10 to 250 dollars</td><td>2,500 to 80,000 Robux</td></tr>
-<tr><td>Large frameworks</td><td>around 300 dollars equivalent</td><td>around 80,000 Robux</td></tr>
+<tr><th>Scope</th><th>Price</th></tr>
+<tr><td>Minimum</td><td>10 dollars or 2,500 Robux</td></tr>
+<tr><td>Typical work range</td><td>10 to 250 dollars or 2,500 to 80,000 Robux</td></tr>
+<tr><td>Extended work / hiring</td><td>Message me for a quote</td></tr>
 </table>
-<div class="note"><strong>Payment terms: half upfront, half after completion.</strong> You receive progress clips before the final payment, and the full source with setup guide after the final payment. Seven day bug fix warranty included.</div>
+<div class="note"><strong>Payment terms: half upfront, half after completion.</strong> Higher upfront payment or full upfront payment gets higher priority in my queue. You receive progress clips before the final payment, and the full source with setup guide after the final payment. Seven day bug fix warranty included.</div>
 <p><strong>Teams and bulk orders.</strong> You can hire me for your team on an ongoing basis, or place bulk orders to save. Message me with your roadmap and I will propose a package.</p>
 <p><strong>Revenue share.</strong> I only accept revenue share from established games with 50 or more average concurrent players and a good history. Otherwise all work is fixed price.</p>
 <p><strong>How buyers can pay on stores.</strong> For store-based work I use Tebex Checkout, which supports PayPal, credit and debit cards, crypto, CashApp, Paysafecard, Razer Gold, Klarna, Afterpay, and many regional methods. Full list here: <a href="https://www.tebex.io/payment-methods" target="_blank">tebex.io/payment-methods</a>. For direct Roblox commissions I accept PayPal and Robux at the rates above.</p>
@@ -126,7 +154,7 @@ footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <section>
 <h2>How to commission me</h2>
-<p>To get an accurate quote quickly, please be very clear and detailed. Include:</p>
+<p>To get an accurate quote quickly, please be very clear and detailed about exactly what you want made and its nuances. Include:</p>
 <ul class="clean">
 <li>Game type and link to your game or test place</li>
 <li>Exactly what you want made, with nuances and edge cases</li>
@@ -139,31 +167,40 @@ footer{margin-top:80px;padding-top:20px;border-top:1px solid var(--line);color:v
 <section>
 <h2>Questions</h2>
 <details open><summary>Will you communicate during the project?</summary><p>Yes. I reply within 24 hours, usually much faster in Eastern Time. You will get milestone updates and clips. I do not disappear mid-commission.</p></details>
-<details><summary>Do you use free models?</summary><p>No. Everything is hand-coded for your game and structured so it can be extended later.</p></details>
+<details><summary>Do you use free models?</summary><p>All scripting is hand-coded for your game. I am not a modeler, you must provide me the models you want to be used or I will use basic, placeholder models.</p></details>
 <details><summary>Will my data wipe? What about exploiters?</summary><p>I use session locking, server-side validation on every remote, rate limits, and retry queues. No system is perfectly exploiter-proof, but my standard is to never trust the client.</p></details>
 <details><summary>What do you need from me to start?</summary><p>Test place access, a prioritized feature list, and any user interface you already have. I will handle architecture and optimization.</p></details>
 </section>
 
 <section id="contact">
 <h2>Contact</h2>
-<p>I am in <strong>Eastern Time</strong> and available often. The fastest way to reach me is Discord. Please include your game type, the three most important systems, and your deadline.</p>
-<div class="card mono" style="font-size:14px">Discord: monsterchugger67 (FATE)<br>Roblox: active daily<br>Local time: <span id="clock2">--:--</span> EST</div>
+<p>I am in <strong>Eastern Time</strong> and available often. My 12 AM is <span class="their-time">loading</span> for you. The fastest way to reach me is Discord. Please include your game type, the three most important systems, and your deadline.</p>
+<div class="card mono" style="font-size:14px">Discord: monsterchugger67 (FATE)<br>Currently: <span id="est-now">--</span> Eastern<br>My 12 AM is <span class="their-time">loading</span> for you</div>
 <div class="btn-row">
 <a class="btn" href="https://discord.com/users/monsterchugger67" target="_blank">Message on Discord</a>
-<a class="btn2" href="https://www.roblox.com/users/profile" target="_blank">Roblox Profile</a>
 <a class="btn2" href="#" onclick="copyDiscord();return false;">Copy Username</a>
 </div>
 <p style="color:var(--mut);font-size:14px">Thank you for considering me. I look forward to helping you ship your game.</p>
 </section>
 
-<footer><span>© 2026 FATE. Hand-coded, no template.</span><span class="mono">Roblox · Luau · Python · Node.js</span></footer>
+<footer><span>© 2026 FATE. Hand-coded, no template. No AI used.</span><span class="mono">Roblox · Luau · Python · Node.js</span></footer>
 </div>
 <div id="toast">Copied</div>
 <script>
 const U="monsterchugger67";
 function copyDiscord(){navigator.clipboard.writeText(U).then(()=>{const t=document.getElementById('toast');t.textContent="Discord username copied: "+U;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000);});}
-function tick(){try{const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',hour12:true});const s=f.format(new Date())+" EST";document.getElementById('clock').textContent=s;document.getElementById('clock2').textContent=s;}catch(e){}}
-setInterval(tick,15000);tick();
+function updateTimes(){
+  try{
+    const now=new Date();
+    var estStr=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(now);
+    var en=document.getElementById('est-now'); if(en) en.textContent=estStr;
+    // My 12 AM EST = 05:00 UTC. Format that instant in visitor local time.
+    var ref=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate(),5,0,0));
+    var local=new Intl.DateTimeFormat([],{hour:'numeric',minute:'2-digit'}).format(ref);
+    document.querySelectorAll('.their-time').forEach(function(el){el.textContent=local;});
+  }catch(e){}
+}
+updateTimes(); setInterval(updateTimes,60000);
 </script>
 </body>
 </html>
