@@ -26,9 +26,16 @@ video{width:100%;height:auto;display:block;background:#000}
 .clip-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
 .clip{border:1px solid var(--line);background:var(--bg);text-decoration:none;color:inherit;display:block}
 .clip video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;border-bottom:1px solid var(--line)}
+.clip img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;border-bottom:1px solid var(--line)}
 .clip .soon{aspect-ratio:16/9;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
 .clip span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
 .clip span b{color:var(--fg)}
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.model{border:1px solid var(--line);background:var(--bg);display:block}
+.model img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;border-bottom:1px solid var(--line)}
+.model .soon{aspect-ratio:16/9;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
+.model span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
+.model span b{color:var(--fg)}
 .btn{display:inline-block;background:var(--fg);color:var(--bg);padding:12px 22px;border-radius:0;font-size:14.5px;font-weight:650;text-decoration:none;border:1px solid var(--fg)}
 .sub{color:var(--mut);max-width:620px}
 section{margin-top:56px}
@@ -41,7 +48,7 @@ code{font-family:ui-monospace,Menlo,monospace;background:var(--soft);border:1px 
 footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 #top{position:fixed;bottom:18px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--fg);color:var(--bg);border:1px solid var(--fg);width:44px;height:44px;font-size:20px;line-height:1;cursor:pointer;opacity:0;transition:.25s;z-index:50;border-radius:0}
 #top.show{transform:translateX(-50%) translateY(0);opacity:1}
-@media(max-width:640px){.grid2{grid-template-columns:1fr}.clip-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}.clip-grid{grid-template-columns:1fr}.model-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -52,7 +59,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 </header>
 
 <h1>Experience and how I got here.</h1>
-<p class="sub">Roblox scripter. Minecraft Modder. Discord Bot Dev. Web-Game/Web-Dev.</p>
+<p class="sub">Roblox scripter and modeler. Minecraft Modder. Discord Bot Dev. Web-Game/Web-Dev.</p>
 
 <section>
 <h2>ROBLOX [MAIN]</h2>
@@ -65,6 +72,25 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <a class="clip" href="videos/leaf.html"><video src="videos/leaf.mp4" preload="metadata" muted playsinline></video><span><b>Leaf picking simulator system</b> Upgrades, picking, tasks, inventory and more.</span></a>
 </div>
 <p><a class="btn" href="clips.html">VIEW MORE</a></p>
+</section>
+
+<section id="modeling">
+<h2>Modeling</h2>
+<p>Game-ready models. Clean topology, optimized for Roblox.</p>
+<div class="model-grid">
+<div class="model"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"><span><b>Katana</b> 8k tris</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+</div>
 </section>
 
 <section>
