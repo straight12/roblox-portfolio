@@ -25,14 +25,17 @@ h1{font-size:32px;letter-spacing:-.8px;margin:0 0 8px}
 section{margin-top:48px}
 .model-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
 .model{border:1px solid var(--line);background:var(--bg);display:block}
-.model a.img-link{display:block;border-bottom:1px solid var(--line);background:#000}
+.model a.img-link{display:block;border-bottom:1px solid var(--line);background:#000;position:relative;overflow:hidden}
 .model img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;display:block;background:#000}
+.model a.img-link img.wm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;aspect-ratio:auto}
 .model .soon{aspect-ratio:1/1;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
 .model span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
 .model span b{color:var(--fg)}
 .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);padding:24px;z-index:100;text-align:center;overflow:auto}
 .lightbox:target{display:block}
 .lightbox img{max-width:94vw;max-height:82vh;margin:16px auto;display:block;background:#000}
+.full-wrap{position:relative;display:inline-block}
+.full-wrap img.wm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .lightbox p{color:#fff;font-size:14px}
 .lightbox p b{color:#fff}
 .lightbox .close{color:#fff;font-size:16px;text-decoration:none;border:1px solid #555;padding:8px 18px;display:inline-block;margin-top:8px}
@@ -54,7 +57,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <section>
 <div class="model-grid">
-<div class="model"><a class="img-link" href="#katana-full"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"></a><span><b>Katana</b> 8k tris</span></div>
+<div class="model"><a class="img-link" href="#katana-full"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"><img class="wm" src="models/watermark.png" alt=""></a><span><b>Katana</b> 8k tris</span></div>
 <div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
 <div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
 <div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
@@ -71,7 +74,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <div id="katana-full" class="lightbox">
 <a class="close" href="#">X close</a>
-<img src="models/katana.png" alt="Katana 3D model full version">
+<div class="full-wrap"><img src="models/katana.png" alt="Katana 3D model full version"><img class="wm" src="models/watermark.png" alt=""></div>
 <p><b>Katana</b> 8k tris &nbsp; <a href="models/katana.png" target="_blank">open full</a></p>
 </div>
 

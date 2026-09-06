@@ -32,8 +32,9 @@ video{width:100%;height:auto;display:block;background:#000}
 .clip span b{color:var(--fg)}
 .model-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
 .model{border:1px solid var(--line);background:var(--bg);display:block}
-.model a.img-link{display:block;border-bottom:1px solid var(--line);background:#000}
+.model a.img-link{display:block;border-bottom:1px solid var(--line);background:#000;position:relative;overflow:hidden}
 .model img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;display:block;background:#000}
+.model a.img-link img.wm{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;aspect-ratio:auto}
 .model .soon{aspect-ratio:1/1;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
 .model span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
 .model span b{color:var(--fg)}
@@ -79,7 +80,7 @@ footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);color:v
 <h2>Modeling</h2>
 <p>Game-ready models. Clean topology, optimized for Roblox.</p>
 <div class="model-grid">
-<div class="model"><a class="img-link" href="modeling.html#katana-full"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"></a><span><b>Katana</b> 8k tris</span></div>
+<div class="model"><a class="img-link" href="modeling.html#katana-full"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"><img class="wm" src="models/watermark.png" alt=""></a><span><b>Katana</b> 8k tris</span></div>
 <div class="model"><div class="soon">+10 more</div><span><b>View all</b> on modeling page</span></div>
 </div>
 <p><a class="btn" href="modeling.html">VIEW ALL MODELS</a></p>
