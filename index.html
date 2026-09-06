@@ -34,8 +34,9 @@ p{margin:10px 0}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .model-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
 .model{border:1px solid var(--line);background:var(--bg);display:block}
-.model img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;background:#000;border-bottom:1px solid var(--line)}
-.model .soon{aspect-ratio:16/9;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
+.model a.img-link{display:block;border-bottom:1px solid var(--line);background:#000}
+.model img{width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;display:block;background:#000}
+.model .soon{aspect-ratio:1/1;display:grid;place-items:center;background:var(--soft);color:var(--mut);font-family:ui-monospace,Menlo,monospace;font-size:13px;border-bottom:1px solid var(--line)}
 .model span{display:block;padding:10px 12px;font-size:13.5px;color:var(--mut)}
 .model span b{color:var(--fg)}
 table{width:100%;border-collapse:collapse;font-size:14.5px;margin:14px 0}
@@ -68,7 +69,7 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background
 
 <header>
 <a class="brand" href="index.html"><img class="avatar" src="roachyes.jpg" alt="monsterchugger67 profile picture">monsterchugger67 <span>/ roblox scripter</span></a>
-<nav><a href="index.html" class="active">Home</a><a href="index.html#work">Work</a><a href="index.html#modeling">Modeling</a><a href="index.html#pricing">Pricing</a><a href="proofs.html">Proofs</a><a href="experience.html">Experience</a><a href="index.html#contact">Contact</a><a href="https://ko-fi.com/monsterchugger67" target="_blank">Purchase</a></nav>
+<nav><a href="index.html" class="active">Home</a><a href="index.html#work">Work</a><a href="modeling.html">Modeling</a><a href="index.html#pricing">Pricing</a><a href="proofs.html">Proofs</a><a href="experience.html">Experience</a><a href="index.html#contact">Contact</a><a href="https://ko-fi.com/monsterchugger67" target="_blank">Purchase</a></nav>
 </header>
 
 <div class="badge">Commission status: open</div>
@@ -102,27 +103,18 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background
 <div class="card"><h3>Mobs, quests, progression</h3><p>Minions, workers, waves, NPCs, dialogue, quests, cutscenes, levels, rebirths, skill trees, plus grows offline systems that earn stuff while players are away. The stuff that keeps players logged in. High school and other roleplay systems on request.</p></div>
 <div class="card"><h3>Shops and money</h3><p>Inventory, shops, trading, crafting, loot, chests, upgrades, rewards, gamepasses, playtime and referral/invite rewards.</p></div>
 <div class="card"><h3>Discord hooked to Roblox</h3><p>Verify members, log buys and bans, roblox moderation via discord and staff rate limits (to prevent mass banning, of course), roblox profile to discord profile roles. Python or Node, your pick.</p></div>
-<div class="card"><h3>Modeling</h3><p>Game-ready weapons and props. Clean topology, optimized tris. See examples in the modeling section below.</p></div>
+<div class="card"><h3>Modeling</h3><p>Game-ready weapons and props. Clean topology, optimized tris. See examples on the <a href="modeling.html">modeling page</a>.</p></div>
 <div class="note"><strong>Built so you can tweak it.</strong> All code is built for customizability as well, containing an easy to read config and well commented Luau. Change damage, cooldowns, prices, chances and mob spawns yourself without digging through core logic.</div>
 </section>
 
 <section id="modeling">
 <h2>Modeling</h2>
-<p>Game-ready models. Clean topology, optimized for Roblox.</p>
+<p>Game-ready models. Clean topology, optimized for Roblox. Click to see full version.</p>
 <div class="model-grid">
-<div class="model"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"><span><b>Katana</b> 8k tris</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
-<div class="model"><div class="soon">soon</div><span><b>Empty</b> coming soon</span></div>
+<div class="model"><a class="img-link" href="modeling.html#katana-full"><img src="models/katana.png" alt="Katana 3D model" loading="lazy"></a><span><b>Katana</b> 8k tris</span></div>
+<div class="model"><div class="soon">+10 more</div><span><b>View all</b> on modeling page</span></div>
 </div>
+<p><a class="btn" href="modeling.html">VIEW ALL MODELS</a></p>
 </section>
 
 <section id="pricing">
